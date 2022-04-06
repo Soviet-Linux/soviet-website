@@ -1,0 +1,116 @@
+/* exciting visible scroll instead of jumps */
+html {
+  scroll-behavior: smooth;
+  }
+
+/* tachyons doesn't have these normally ? */
+.bg-fixed {
+  background-attachment: fixed;
+  }
+
+.bg-scroll {
+  background-attachment: scroll;
+  }
+
+.sticky {
+  position: sticky;
+  }
+
+
+/* the padding defaults are terrible, assign it as needed */
+h1,h2,h3,h4,h5,h6,f1,f2,f3,f4,f5,f6,f-headline,f-subheadline,f-title,f-subtitle {
+  padding: 0;
+  margin: 0;
+  }
+
+
+/* colours !! */
+.bg-transp-light {
+  background-color: hsla(240,20%,90%,0.5);
+  }
+.bg-transp-dark {
+  background-color: hsla(240,20%,10%,0.5);
+  }
+
+.bg-sov-red {
+ background-color: #782121;
+  }
+.hover-bg-sov-red:hover {
+ background-color: #782121;
+  }
+/* overriding the default, for accessability improvement */
+.dark-gray {
+  color: #2d2d2d;
+  }
+.bg-dark-gray {
+  background-color: #2d2d2d;
+  }
+
+/* animations */
+.ani-05s {
+animation-duration: 0.5s;
+}
+.ani-1s {
+animation-duration: 1s;
+}
+.ani-2s {
+animation-duration: 2s;
+}
+.ani-3s {
+animation-duration: 3s;
+}
+.ani-ease-out {
+animation-timing-function: ease-out;
+}
+.ani-linear {
+animation-timing-function: linear;
+}
+.ani-delay-05s {
+animation-delay: 0.5s
+}
+
+.ani-fade-in {
+animation-name: fade-in;
+}
+@keyframes fade-in {
+    from
+    {opacity:0;}
+    to
+    {opacity:1;}
+}
+.ani-fade-in-top {
+animation-name: fade-in-top;
+}
+@keyframes fade-in-top {
+    from
+    {opacity:0; transform: translate3D(0,-15vh,0);}
+    to
+    {opacity:1; transform: translate3D(0,0vh,0);}
+}
+.ani-fade-in-left {
+animation-name: fade-in-left;
+}
+@keyframes fade-in-left {
+    from
+    {opacity:0; transform: translate3D(-15vh,0,0);}
+    to
+    {opacity:1; transform: translate3D(0vh,0,0);}
+}
+.ani-fade-in-right {
+animation-name: fade-in-right;
+}
+@keyframes fade-in-right {
+    from
+    {opacity:0; transform: translate3D(15vh,0,0);}
+    to
+    {opacity:1; transform: translate3D(0vh,0,0);}
+}
+.ani-fade-in-right-wide {
+animation-name: fade-in-right-wide;
+}
+@keyframes fade-in-right-wide {
+    from
+    {opacity:0; transform: translate3D(30vh,0,0);}
+    to
+    {opacity:1; transform: translate3D(0vh,0,0);}
+}
