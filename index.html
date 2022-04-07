@@ -1,68 +1,79 @@
+<!--
+This site was built using the Tachyons CSS framework - https://tachyons.io/
+Do not change anything unless you know what you're doing!
+-->
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>SOVIET LINUX - TEST SITE</title>
+<title>SOVIET LINUX</title>
 
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<!-- local CSS -->
+
+<!-- stylesheets
+ don't mess with this unless you intend to move the .css file, or use a different, additional framework.
+ If you add another stylesheet, remember that the browser parses them from top to bottom, and any duplicate items in the later file will overwrite the previous.
+ -->
   <link rel="stylesheet" href="css/tachyons.min.css">
   <link rel="stylesheet" href="css/tachyons-extra.css">
-<!-- favicon -->
+<!-- favicon
+ the little icon in the browser tab
+-->
 <link rel="icon" type="image/svg+xml" href="images/star-favicon.svg">
 
+<!--
+any extra styles can be put here between the <style> tags, or in the stylesheet directly. Any duplicate content put here will override content in the stylesheet. Use with caution.
+-->
 <style>
-@font-face {
-  font-family: 'Teko';
-  src: url('fonts/Teko-Regular.ttf');
-  }
-.font-teko {
-  font-family: 'Teko', sans-serif;
-}
-@font-face {
-  font-family: 'Hind';
-  src: url('fonts/Hind-Regular.ttf');
-  }
-.font-hind {
-  font-family: 'Hind', sans-serif;
-}
-@font-face {
-  font-family: 'Russian';
-  src: url('fonts/Russian.ttf');
-  }
-.font-russian {
-  font-family: 'Russian', sans-serif;
-  }
 </style>
-
 </head>
 
-<!-- title and subtitle -->
+<!--
+Below here is the visible part of the website. Any classes added to the body tag will be applied to the whole site, unless they're overridden in the tags below.
+We're using the Hind font as the default for text. -->
 <body class="font-hind">
+
+<!-- the header is the logo, the penguin, and the link to the iso. the entire first screen. -->
 <header class="cover flex flex-column items-center justify-between pt5 pt6-l pl2 pr2 vh-100-l" style="background-image: url('images/rays.svg');">
+
+<!-- the big SOVIET LINUX title, and the subtitle -->
   <div class="font-russian f-subheadline f-headline-l tracked white tc ani-fade-in ani-1s">SOVIET &#9733; LINUX<br />
+  
+<!-- the subheadline is nested into the title's div to keep them together on the screen -->
     <div class="font-teko b f2 f3-m tracked white">The source based distribution for the people
     </div>
-    <div class="font-teko b f2 f3-m tracked underline yellow">TESTING SITE - NOTHING WORKS!!</div>
   </div>
 
-<!-- Tux and link to current -->
+<!-- the SECTION contains the Tux image that slides in, and the iso download link -->
   <section class="h-50 w-100 flex flex-row items-center items-start-l pt5">
+<!-- there's two <div>s within the section, this one is the Tux graphic -->
     <div class="w-40 self-end">
       <img class="w-75 w-50-l v-btm ani-fade-in-right-wide ani-2s ani-linear" src="images/tux-soviet.svg" />
     </div>
-    <div class="w-60">
-      <a class="no-underline ph2 font-teko b f1 bg-animate bg-dark-red hover-bg-sov-red yellow hover-light-yellow ba bw2 b--dark-gray br3 ani-fade-in ani-1s ani-ease-out" href="link/to/iso">
+<!-- this is the iso file -->
+    <div class="tc">
+      <p class="font-hind white b">Join the Revolution!</p>
+<!-- the href in this <a> section below is the actual link to the iso -->
+      <a class="no-underline ph2 font-teko b f1 bg-animate bg-dark-red hover-bg-sov-red yellow hover-light-yellow ba bw3 b--dark-gray br3 ani-fade-in ani-1s ani-ease-out"
+      href="https://drive.google.com/file/d/1-jQcLdOwEA-Fzbn1r6LPaY4E5O0TGIwj/view?usp=sharing"
+      >
+<!-- I'm calling it soviet-current.iso, but if there's a better name go ahead and change it -->
         SOVIET-CURRENT.ISO
       </a>
     </div>
   </section>
 </header>
 
-<!-- the main content -->
+<!-- the main content of the page - more stuff will come in here eventually.
+ Right now, <main> is acting as a container for the content. It's got the fixed position background image for the section -->
 <main class="cover bg-top bg-fixed" style="background-image: url('images/unbreakable_union.jpg');">
+<!-- this section is the about info. It's got a semi-transparent background, which lets the image from <main> show through -->
   <section class="pv5 ph2 flex flex-column items-center bg-sov-red-t8">
+<!-- this <p> is the section title -->
     <p class="font-teko b tracked f1 f2-m light-yellow self-start self-center-l pl5 pl0-l">ABOUT</p>
+<!-- the <div> below is the text of the section-->
     <div class="font-hind white flex flex-column">
     <p class="b">
       Soviet Linux is a source based distribution.
@@ -82,16 +93,22 @@
   </section>
 </main>
 
-<!-- contact, copyright, etc -->
-<footer class="bg-center bg-dark-gray bg-size-10" style="background-image: url('images/star.svg')">
+<!-- the <footer> is doing the same as <main> right now - it's a container with a background image. -->
+<footer class="bg-center bg-dark-gray cover" style="background-image: url('images/flag_over_berlin.jpg')">
+
+<!-- this section is semi-transparent grey, which lets the <footer> background image show through. It's using flexbox instead of paragraphs so that we can add more links in later and readjust the flow (if needed)-->
   <section class="pv3 ph2 bg-dark-gray-t8 flex flex-column items-center justify-center">
+<!-- This <p> is the title of the content -->
   <p class="font-teko b tracked f1 f2-m light-yellow self-start self-center-l pl5 pl0-l">CONTACT</p>
+<!-- there are two links to other sites, that use the same styling. The <a> tag is on the outside on purpose - everything you can see on the browser is part of the link -->
+<!-- Discord -->
     <a class="f3 no-underline hover-bg-sov-red br2 mv1" href="https://discord.gg/sPyFwyG6">
       <figure class="tc" style="">
       <img class="h3" src="images/discord-white.svg" alt="">
       <figcaption class="font-teko light-yellow hover-white">Discord</figcaption>
       </figure>
       </a>
+<!-- Github -->
     <a class="f3 no-underline hover-bg-sov-red br2 mv1" href="https://github.com/Soviet-Linux/">
       <figure class="tc" style="">
       <img class="h3" src="images/github-white.svg" alt="">

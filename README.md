@@ -15,8 +15,8 @@ _Soviet_ is designed to be easy to maintain by users that may not have html/css 
 
 TO-DO:
 + needs content
-+ add comments to code
-+ more <meta> items
++ add comments to code - done?
++ more \<meta\> items
 + tidy up the indentation
 + standardize class order
 + fix the jaggy bit coming off Tux's arm
