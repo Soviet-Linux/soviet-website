@@ -95,6 +95,10 @@ color: #782121;
 /* 80% opaque, 20% transparent */
 .bg-sov-red-t8 {
  background-color:hsla(0,57%,30%,0.8);
+ }
+/* 90% opaque, 10% transparent */
+.bg-sov-red-t9 {
+ background-color:hsla(0,57%,30%,0.9);
   }
 /* overriding the default, for accessability improvement */
 .dark-gray {
@@ -105,6 +109,9 @@ color: #782121;
   }
 .bg-dark-gray-t8 {
   background-color:hsla(0,0%,18%,0.8);
+  }
+.bg-dark-gray-t9 {
+  background-color:hsla(0,0%,18%,0.9);
   }
 
 /* animations */

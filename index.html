@@ -36,25 +36,26 @@ We're using the Hind font as the default for text. -->
 <body class="font-hind">
 
 <!-- the header is the logo, the penguin, and the link to the iso. the entire first screen. -->
-<header class="cover flex flex-column items-center justify-between pt5 pt6-l pl2 pr2 vh-100-l" style="background-image: url('images/rays.svg');">
+<header class="cover vh-100-l" style="background-image: url('images/rays.svg');">
 
+<section class="h-50 pt5 pt6-l ph2">
 <!-- the big SOVIET LINUX title, and the subtitle -->
-  <div class="font-russian f-subheadline f-headline-l tracked white tc ani-fade-in ani-1s">SOVIET &#9733; LINUX<br />
-  
+  <div class="font-russian f-subheadline f-headline-l tracked white tc ani-fade-in ani-1s">SOVIET&#9773; LINUX<br />
 <!-- the subheadline is nested into the title's div to keep them together on the screen -->
     <div class="font-teko b f2 f3-m tracked white">The source based distribution for the people
     </div>
   </div>
+</section>
 
 <!-- the SECTION contains the Tux image that slides in, and the iso download link -->
-  <section class="h-50 w-100 flex flex-row items-center items-start-l pt5">
+<section class="h-50 w-100 flex flex-row items-center items-start-l pt5">
 <!-- there's two <div>s within the section, this one is the Tux graphic -->
     <div class="w-40 self-end">
       <img class="w-75 w-50-l v-btm ani-fade-in-right-wide ani-2s ani-linear" src="images/tux-soviet.svg" />
     </div>
-<!-- this is the iso file -->
+<!-- this <div> contains the iso file and the above & below stars -->
     <div class="tc">
-      <p class="font-hind white b">Join the Revolution!</p>
+      <p class="f3 light-yellow">&#9733;</p>
 <!-- the href in this <a> section below is the actual link to the iso -->
       <a class="no-underline ph2 font-teko b f1 bg-animate bg-dark-red hover-bg-sov-red yellow hover-light-yellow ba bw3 b--dark-gray br3 ani-fade-in ani-1s ani-ease-out"
       href="https://drive.google.com/file/d/1-jQcLdOwEA-Fzbn1r6LPaY4E5O0TGIwj/view?usp=sharing"
@@ -62,6 +63,7 @@ We're using the Hind font as the default for text. -->
 <!-- I'm calling it soviet-current.iso, but if there's a better name go ahead and change it -->
         SOVIET-CURRENT.ISO
       </a>
+      <p class="f3 light-yellow">&#9733;</p>
     </div>
   </section>
 </header>
@@ -97,7 +99,7 @@ We're using the Hind font as the default for text. -->
 <footer class="bg-center bg-dark-gray cover" style="background-image: url('images/flag_over_berlin.jpg')">
 
 <!-- this section is semi-transparent grey, which lets the <footer> background image show through. It's using flexbox instead of paragraphs so that we can add more links in later and readjust the flow (if needed)-->
-  <section class="pv3 ph2 bg-dark-gray-t8 flex flex-column items-center justify-center">
+  <section class="pv3 ph2 bg-dark-gray-t9 flex flex-column items-center justify-center">
 <!-- This <p> is the title of the content -->
   <p class="font-teko b tracked f1 f2-m light-yellow self-start self-center-l pl5 pl0-l">CONTACT</p>
 <!-- there are two links to other sites, that use the same styling. The <a> tag is on the outside on purpose - everything you can see on the browser is part of the link -->
