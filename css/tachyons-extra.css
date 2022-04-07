@@ -1,13 +1,17 @@
-/* exciting visible scroll instead of jumps */
 html {
-  scroll-behavior: smooth;
-  }
+scroll-behavior:smooth; 
+}
 
 /* tachyons doesn't have these normally ? */
 .bg-fixed {
   background-attachment: fixed;
   }
-
+.bg-center {
+  background-position: center center;
+  }
+.bg-top {
+  background-position: top center;
+  }
 .bg-scroll {
   background-attachment: scroll;
   }
@@ -15,7 +19,27 @@ html {
 .sticky {
   position: sticky;
   }
-
+.bg-size-5 {
+  background-size: 5%;
+  }
+.bg-size-10 {
+  background-size: 10%;
+  }
+.bg-size-15 {
+  background-size: 15%;
+  }
+.bg-size-20 {
+  background-size: 20%;
+  }
+.bg-size-25 {
+  background-size: 25%;
+  }
+.bg-size-50 {
+  background-size: 50%;
+  }
+.bg-size-75 {
+  background-size: 75%;
+  }
 
 /* the padding defaults are terrible, assign it as needed */
 h1,h2,h3,h4,h5,h6,f1,f2,f3,f4,f5,f6,f-headline,f-subheadline,f-title,f-subtitle {
@@ -25,15 +49,11 @@ h1,h2,h3,h4,h5,h6,f1,f2,f3,f4,f5,f6,f-headline,f-subheadline,f-title,f-subtitle 
 
 
 /* colours !! */
-.bg-transp-light {
-  background-color: hsla(240,20%,90%,0.5);
-  }
-.bg-transp-dark {
-  background-color: hsla(240,20%,10%,0.5);
-  }
-
 .bg-sov-red {
  background-color: #782121;
+  }
+.bg-sov-red-t8 {
+ background-color:hsla(0,57%,30%,0.8);
   }
 .hover-bg-sov-red:hover {
  background-color: #782121;
@@ -44,6 +64,9 @@ h1,h2,h3,h4,h5,h6,f1,f2,f3,f4,f5,f6,f-headline,f-subheadline,f-title,f-subtitle 
   }
 .bg-dark-gray {
   background-color: #2d2d2d;
+  }
+.bg-dark-gray-t8 {
+  background-color:hsla(0,0%,18%,0.8);
   }
 
 /* animations */
