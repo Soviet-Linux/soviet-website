@@ -1,4 +1,7 @@
-/* if you add content to this stylesheet, remember that it's read from top to bottom. If there are duplicates, the content that's physically further down the page will be used.
+/*
+ * this file includes extra classes created because Tachyons doesn't include them, or we wanted to override the default values.
+ * 
+ * If you add content to this stylesheet, remember that it's read from top to bottom. If there are duplicates, the content that's physically further down the page will be used.
 */
 
 html {
@@ -32,6 +35,18 @@ scroll-behavior:smooth;
 
 /* tachyons doesn't have these normally ? */
 
+.mt-auto {
+margin-top: auto;
+}
+.mb-auto {
+margin-bottom: auto;
+}
+.ml-auto {
+margin-left: auto;
+}
+.mr-auto {
+margin-right: auto;
+}
 /* these control if the background image scrolls with the page or is fixed in place.
  */
 .bg-fixed {
@@ -54,7 +69,7 @@ scroll-behavior:smooth;
 .bg-rightbottom {
   background-position: right bottom;
   }
-/* the background image defaults to 100% size, whatever it's pixel dimensions are. These shrink it if desired
+/* the background image defaults to 100% size, whatever it's pixel dimensions are. These shrink the image, if desired
  * */
 .bg-size-5 {
   background-size: 5%;
@@ -94,7 +109,7 @@ color: #782121;
 .bg-sov-red {
  background-color: #782121;
   }
-/* put your mouse over an object, it turs this colour */
+/* put your mouse over an object, it turns this colour */
 .hover-bg-sov-red:hover {
  background-color: #782121;
   }
