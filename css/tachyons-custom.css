@@ -42,11 +42,17 @@ scroll-behavior:smooth;
   }
 /* if the background is bigger than the available screen size, these control where the image is anchored, and changes what you'll see
  */
-.bg-top {
-  background-position: top center;
+.bg-lefttop {
+  background-position: left top;
   }
-.bg-bottom {
-  background-position: bottom center;
+.bg-leftbottom {
+  background-position: left bottom;
+  }
+.bg-righttop {
+  background-position: right top;
+  }
+.bg-rightbottom {
+  background-position: right bottom;
   }
 /* the background image defaults to 100% size, whatever it's pixel dimensions are. These shrink it if desired
  * */

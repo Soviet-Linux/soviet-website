@@ -29,7 +29,7 @@
      inkscape:current-layer="layer1"
      inkscape:document-units="px"
      inkscape:cy="1035.4702"
-     inkscape:cx="2177.6706"
+     inkscape:cx="2177.6707"
      inkscape:zoom="0.26702844"
      inkscape:pageshadow="0"
      inkscape:pageopacity="0.0"
@@ -82,37 +82,25 @@
      inkscape:groupmode="layer"
      inkscape:label="Layer 1">
     <path
-       style="fill:#782121;fill-opacity:1;stroke:none;stroke-width:80;stroke-linejoin:round;paint-order:stroke fill markers"
+       style="fill:#a02c2c;fill-opacity:1;stroke:none;stroke-width:80;stroke-linejoin:round;paint-order:stroke fill markers"
        d="M 0,2000 H 4000 V 1320 Z"
        id="path39996"
        sodipodi:nodetypes="cccc" />
     <path
-       style="fill:#d38d5f;fill-opacity:1;stroke:none;stroke-width:80;stroke-linejoin:round;paint-order:stroke fill markers"
-       d="M 0,2000 4000,1320 V 640 Z"
        id="path39998"
-       sodipodi:nodetypes="cccc" />
+       style="fill:#d3bc5f;fill-opacity:1;stroke:none;stroke-width:80;stroke-linejoin:round;paint-order:stroke fill markers"
+       d="M 4000 0 L 0 2000 L 4000 1320 L 4000 640 L 4000 0 z " />
     <path
-       style="fill:#782121;fill-opacity:1;stroke:none;stroke-width:80;stroke-linejoin:round;paint-order:stroke fill markers"
-       d="M 0,2000 4000,640 V 0 Z"
-       id="path40000"
-       sodipodi:nodetypes="cccc" />
-    <path
-       style="fill:#d38d5f;fill-opacity:1;stroke:none;stroke-width:80;stroke-linejoin:round;paint-order:stroke fill markers"
-       d="M 0,2000 4000,0 H 2760 Z"
        id="path40002"
-       sodipodi:nodetypes="cccc" />
+       style="fill:#a02c2c;fill-opacity:1;stroke:none;stroke-width:80;stroke-linejoin:round;paint-order:stroke fill markers"
+       d="M 1780 0 L 0 2000 L 4000 0 L 2760 0 L 1780 0 z " />
     <path
-       style="fill:#782121;fill-opacity:1;stroke:none;stroke-width:80;stroke-linejoin:round;paint-order:stroke fill markers"
-       d="M 0,2000 2760,0 h -980 z"
-       id="path40004"
-       sodipodi:nodetypes="cccc" />
-    <path
-       style="fill:#d38d5f;fill-opacity:1;stroke:none;stroke-width:80;stroke-linejoin:round;paint-order:stroke fill markers"
+       style="fill:#d3bc5f;fill-opacity:1;stroke:none;stroke-width:80;stroke-linejoin:round;paint-order:stroke fill markers"
        d="M 0,2000 1780,0 H 800 Z"
        id="path40006"
        sodipodi:nodetypes="cccc" />
     <path
-       style="fill:#782121;fill-opacity:1;stroke:none;stroke-width:80;stroke-linejoin:round;paint-order:stroke fill markers"
+       style="fill:#a02c2c;fill-opacity:1;stroke:none;stroke-width:80;stroke-linejoin:round;paint-order:stroke fill markers"
        d="M 0,2000 800,0 H 0 Z"
        id="path40008"
        sodipodi:nodetypes="cccc" />
