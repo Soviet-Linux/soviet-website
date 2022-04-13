@@ -1,0 +1,216 @@
+/*
+ * this file includes extra classes created because Tachyons doesn't include them, or we wanted to override the default values.
+ * 
+ * If you add content to this stylesheet, remember that it's read from top to bottom. If there are duplicates, the content that's physically further down the page will be used.
+*/
+
+html {
+scroll-behavior:smooth; 
+}
+/* fonts
+ * The @import gives the font a name and file location for the browser to use. The .font-* class is for inserting the code into the .html file
+ */
+@font-face {
+  font-family: 'Teko';
+  src: url('../fonts/Teko-Regular.ttf');
+  }
+.font-teko {
+  font-family: 'Teko', sans-serif;
+}
+@font-face {
+  font-family: 'Hind';
+  src: url('../fonts/Hind-Regular.ttf');
+  }
+.font-hind {
+  font-family: 'Hind', sans-serif;
+}
+@font-face {
+  font-family: 'Russian';
+  src: url('../fonts/Russian.ttf');
+  }
+.font-russian {
+  font-family: 'Russian', sans-serif;
+  }
+
+
+/* tachyons doesn't have these normally ? */
+
+.mt-auto {
+margin-top: auto;
+}
+.mb-auto {
+margin-bottom: auto;
+}
+.ml-auto {
+margin-left: auto;
+}
+.mr-auto {
+margin-right: auto;
+}
+/* these control if the background image scrolls with the page or is fixed in place.
+ */
+.bg-fixed {
+  background-attachment: fixed;
+  }
+.bg-scroll {
+  background-attachment: scroll;
+  }
+/* if the background is bigger than the available screen size, these control where the image is anchored, and changes what you'll see
+ */
+.bg-lefttop {
+  background-position: left top;
+  }
+.bg-leftbottom {
+  background-position: left bottom;
+  }
+.bg-righttop {
+  background-position: right top;
+  }
+.bg-rightbottom {
+  background-position: right bottom;
+  }
+/* the background image defaults to 100% size, whatever it's pixel dimensions are. These shrink the image, if desired
+ * */
+.bg-size-5 {
+  background-size: 5%;
+  }
+.bg-size-10 {
+  background-size: 10%;
+  }
+.bg-size-15 {
+  background-size: 15%;
+  }
+.bg-size-20 {
+  background-size: 20%;
+  }
+.bg-size-25 {
+  background-size: 25%;
+  }
+.bg-size-50 {
+  background-size: 50%;
+  }
+.bg-size-75 {
+  background-size: 75%;
+  }
+
+/* these are all Tachyon's headers, titles, basically the big letters. The padding defaults are terrible, and we'll assign them as needed using classes
+ */
+h1,h2,h3,h4,h5,h6,f-headline,f-subheadline,f-title,f-subtitle {
+  padding: 0;
+  margin: 0;
+  }
+
+/* colours !! */
+/* text colour */
+.sov-red {
+color: #782121;
+}
+/* background colour */
+.bg-sov-red {
+ background-color: #782121;
+  }
+/* put your mouse over an object, it turns this colour */
+.hover-bg-sov-red:hover {
+ background-color: #782121;
+  }
+/* 80% opaque, 20% transparent */
+.bg-sov-red-t8 {
+ background-color:rgba(121,32,32,0.8);
+ }
+/* 90% opaque, 10% transparent */
+.bg-sov-red-t9 {
+ background-color:rgba(151,32,32,0.9);
+  }
+/* overriding the default, for accessability improvement */
+.dark-gray {
+  color: #2d2d2d;
+  }
+.bg-dark-gray {
+  background-color: #2d2d2d;
+  }
+.bg-dark-gray-t8 {
+  background-color:rgba(45,45,45,0.8);
+  }
+.bg-dark-gray-t9 {
+  background-color:rgba(45,45,45,0.9);
+  }
+
+/* animations */
+
+/* how long the animation lasts */
+.ani-05s {
+animation-duration: 0.5s;
+}
+.ani-1s {
+animation-duration: 1s;
+}
+.ani-2s {
+animation-duration: 2s;
+}
+.ani-3s {
+animation-duration: 3s;
+}
+
+/* different vary the speed of the animations */
+.ani-ease-out {
+animation-timing-function: ease-out;
+}
+.ani-linear {
+animation-timing-function: linear;
+}
+
+/* different animations - their purpose should be obvious from their names */
+.ani-fade-in {
+animation-name: fade-in;
+}
+@keyframes fade-in {
+    from
+    {opacity:0;}
+    to
+    {opacity:1;}
+}
+.ani-fade-in-top {
+animation-name: fade-in-top;
+}
+@keyframes fade-in-top {
+    from
+    {opacity:0; transform: translate3D(0,-15vh,0);}
+    to
+    {opacity:1; transform: translate3D(0,0vh,0);}
+}
+.ani-fade-in-bottom {
+animation-name: fade-in-top;
+}
+@keyframes fade-in-bottom {
+    from
+    {opacity:0; transform: translate3D(0,15vh,0);}
+    to
+    {opacity:1; transform: translate3D(0,0vh,0);}
+}
+.ani-fade-in-left {
+animation-name: fade-in-left;
+}
+@keyframes fade-in-left {
+    from
+    {opacity:0; transform: translate3D(-15vh,0,0);}
+    to
+    {opacity:1; transform: translate3D(0vh,0,0);}
+}
+.ani-fade-in-right {
+animation-name: fade-in-right;
+}
+@keyframes fade-in-right {
+    from
+    {opacity:0; transform: translate3D(15vh,0,0);}
+    to
+    {opacity:1; transform: translate3D(0vh,0,0);}
+}
+.ani-fade-in-right-wide {
+animation-name: fade-in-right-wide;
+}
+@keyframes fade-in-right-wide {
+    from
+    {opacity:0; transform: translate3D(30vh,0,0);}
+    to
+    {opacity:1; transform: translate3D(0vh,0,0);}
+}
