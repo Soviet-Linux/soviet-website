@@ -8,9 +8,11 @@ Do not change anything unless you know what you're doing!
 
 <head>
   <title>SOVIET LINUX</title>
-  
   <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description"  content="Soviet Linux, a source based Linux Distribution">
+  <meta name="keywords" content="Linux, Soviet, source based, LFS">
+  <meta name="author" content="Trevor Beckerson, https://github.com/tbeckerson">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <!-- stylesheets
    don't mess with this unless you intend to move the .css file, or use a different, additional framework.

@@ -28,9 +28,9 @@
      inkscape:document-rotation="0"
      inkscape:current-layer="layer1"
      inkscape:document-units="px"
-     inkscape:cy="783.90617"
-     inkscape:cx="1257.3405"
-     inkscape:zoom="0.35590994"
+     inkscape:cy="659.93749"
+     inkscape:cx="331.02537"
+     inkscape:zoom="3.312435"
      inkscape:pageshadow="0"
      inkscape:pageopacity="0.0"
      borderopacity="1.0"
@@ -148,9 +148,9 @@
        sodipodi:nodetypes="caacc" />
     <path
        style="fill:#732626;fill-opacity:1;stroke:#333333;stroke-width:32.0676;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       d="m -153.16816,-87.331754 -192.26924,-0.0016 c 0,0 59.39477,-138.565746 90.59866,-148.391786 31.2039,-9.82604 101.67058,148.393546 101.67058,148.393546 z"
+       d="m -345.4374,-87.333354 c 0,0 59.39477,-138.565746 90.59866,-148.391786 31.2039,-9.82604 101.67058,148.393466 101.67058,148.393466 z"
        id="path36820"
-       sodipodi:nodetypes="ccscc" />
+       sodipodi:nodetypes="cscc" />
     <path
        id="rect5938"
        style="fill:#333333;fill-opacity:1;stroke-width:32.0676;paint-order:stroke fill markers"
