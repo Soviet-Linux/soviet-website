@@ -105,6 +105,9 @@ h1,h2,h3,h4,h5,h6,f-headline,f-subheadline,f-title,f-subtitle {
 .sov-red {
 color: #782121;
 }
+.hover-sov-red:hover {
+color: #782121;
+}
 /* background colour */
 .bg-sov-red {
  background-color: #782121;
@@ -119,7 +122,7 @@ color: #782121;
  }
 /* 90% opaque, 10% transparent */
 .bg-sov-red-t9 {
- background-color:rgba(151,32,32,0.9);
+ background-color:rgba(121,32,32,0.9);
   }
 /* overriding the default, for accessability improvement */
 .dark-gray {
@@ -137,26 +140,91 @@ color: #782121;
 
 /* animations */
 
-/* how long the animation lasts */
-.ani-05s {
-animation-duration: 0.5s;
+/*wait to start */
+.ani-delay-05s {
+  animation-delay: 0.5s;
 }
-.ani-1s {
-animation-duration: 1s;
+.ani-delay-1s {
+  animation-delay: 1s;
 }
-.ani-2s {
-animation-duration: 2s;
+.ani-delay-15s {
+  animation-delay: 1.5s;
 }
-.ani-3s {
-animation-duration: 3s;
+.ani-delay-2s {
+  animation-delay: 2s;
+}
+.ani-delay-25s {
+  animation-delay: 25s;
+}
+.ani-delay-3s {
+  animation-delay: 3s;
+}
+.ani-delay-35s {
+  animation-delay: 3.5s;
+}
+.ani-delay-4s {
+  animation-delay: 4s;
+}
+.ani-delay-45s {
+  animation-delay: 4.5s;
+}
+.ani-delay-5s {
+  animation-delay: 5s;
 }
 
-/* different vary the speed of the animations */
+/* if there's a delay starting the animation, does it begin on the first frame, or the last */
+.ani-forwards {
+  animation-fill-mode: forwards;
+}
+.ani-backwards {
+  animation-fill-mode: backwards;
+}
+/* how long the animation lasts */
+.ani-05s {
+  animation-duration: 0.5s;
+}
+.ani-1s {
+  animation-duration: 1s;
+}
+.ani-15s {
+  animation-duration: 1.5s;
+}
+.ani-2s {
+  animation-duration: 2s;
+}
+.ani-25s {
+  animation-duration: 25s;
+}
+.ani-3s {
+  animation-duration: 3s;
+}
+.ani-35s {
+  animation-duration: 3.5s;
+}
+.ani-4s {
+  animation-duration: 4s;
+}
+.ani-45s {
+  animation-duration: 4.5s;
+}
+.ani-5s {
+  animation-duration: 5s;
+}
+
+
+/* vary the speed pattern of the animations */
+
+.ani-ease-in {
+  animation-timing-function: ease-in;
+}
 .ani-ease-out {
-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+.ani-ease-in-out {
+  animation-timing-function: ease-in-out;
 }
 .ani-linear {
-animation-timing-function: linear;
+  animation-timing-function: linear;
 }
 
 /* different animations - their purpose should be obvious from their names */
@@ -214,3 +282,56 @@ animation-name: fade-in-right-wide;
     to
     {opacity:1; transform: translate3D(0vh,0,0);}
 }
+
+.mvh-25 {max-height: 25vh;}
+.mvh-50 {max-height: 50vh;}
+.mvh-75 {max-height: 75vh;}
+.mvh-100 {max-height: 100vh;}
+
+/* why u no have grid layout??? */
+.justify-even {justify-content:space-evenly;}
+.grid {display:grid;}
+.inline-grid {display:inline-grid;}
+.grid-2-column {grid-template-columns: auto auto;}
+.grid-3-column {grid-template-columns: auto auto auto;}
+.grid-4-column {grid-template-columns: auto auto auto auto;}
+.grid-5-column {grid-template-columns: auto auto auto auto auto;}
+
+.grid-row-auto {grid-auto-rows: 1fr;}
+.grid-row-25 {grid-auto-rows: 25vh;}
+.grid-row-50 {grid-auto-rows: 50vh;}
+.grid-row-75 {grid-template-rows: 75vh;}
+.grid-row-100 {grid-template-rows: 100vh;}
+
+.gc-start-0 {grid-column-start: -1;}
+.gc-start-1 {grid-column-start: 1;}
+.gc-start-2 {grid-column-start: 2;}
+.gc-start-3 {grid-column-start: 3;}
+.gc-start-4 {grid-column-start: 4;}
+.gc-start-5 {grid-column-start: 5;}
+.gc-start-5 {grid-column-start: 6;}
+
+.gr-start-0 {grid-row-start: -1;}
+.gr-start-1 {grid-row-start: 1;}
+.gr-start-2 {grid-row-start: 2;}
+.gr-start-3 {grid-row-start: 3;}
+.gr-start-4 {grid-row-start: 4;}
+.gr-start-5 {grid-row-start: 5;}
+.gr-start-5 {grid-row-start: 6;}
+
+.gc-end-0 {grid-column-end: -1;}
+.gc-end-1 {grid-column-end: 1;}
+.gc-end-2 {grid-column-end: 2;}
+.gc-end-3 {grid-column-end: 3;}
+.gc-end-4 {grid-column-end: 4;}
+.gc-end-5 {grid-column-end: 5;}
+.gc-end-5 {grid-column-end: 6;}
+
+.gr-end-0 {grid-row-end: -1;}
+.gr-end-1 {grid-row-end: 1;}
+.gr-end-2 {grid-row-end: 2;}
+.gr-end-3 {grid-row-end: 3;}
+.gr-end-4 {grid-row-end: 4;}
+.gr-end-5 {grid-row-end: 5;}
+.gr-end-5 {grid-row-end: 6;}
+
