@@ -42,7 +42,7 @@ We're using the Hind font as the default for text. The php is calling the backgr
 <body class="font-hind bg-center bg-top-l bg-size-75" style="background-image: url('<?php echo $bg_image_1; ?>');">
 
 <!-- the header is the logo, the penguin, and the link to the iso. the entire first screen. -->
-<header class="vh-100-l grid grid-3-column grid-row-50 bg-leftbottom ani-fade-in ani-1s" style="background-image: url('assets/rays.svg');">
+<header class="vh-100-l grid grid-3-column grid-row-auto bg-leftbottom ani-fade-in ani-1s" style="background-image: url('assets/rays.svg');">
 
 <!-- the big SOVIET LINUX title, and the subtitle -->
     <div class="self-center gc-start-1 gc-end-4 font-russian f1 f-subheadline-m f-headline-l tracked white tc ani-fade-in ani-2s ani-delay-1s ani-backwards">SOVIET&#9773; LINUX<br />
@@ -56,7 +56,7 @@ We're using the Hind font as the default for text. The php is calling the backgr
       <!-- left star -->
       <div class="dib f1 tc white pr2">&#9733;</div>
 <!-- the href in this <a> section below is the actual link to the iso -->
-      <a class="no-underline ph3 pv3 bg-dark-red hover-bg-light-yellow yellow hover-sov-red font-teko b f3 f2-s f1-l f3 tc bg-animate ba bw1 bw2-ns b--dark-gray br3"
+      <a class="linux no-underline ph3 pt3 pb2 bg-dark-red hover-bg-sov-red yellow font-teko b f3 f2-s f1-l f3 tc bg-animate ba bw1 bw2-ns b--dark-gray br3"
       href="https://drive.google.com/file/d/1-jQcLdOwEA-Fzbn1r6LPaY4E5O0TGIwj/view?usp=sharing"
       >
 <!-- I'm calling it soviet-current.iso, but if there's a better name go ahead and change it -->
@@ -64,7 +64,10 @@ We're using the Hind font as the default for text. The php is calling the backgr
       </a>
       <!-- bottom star -->
       <div class="dib f1 tc white pl2">&#9733;</div>
-
+      <section class="pt4 tracked">
+      <div class="font-teko f5 f4-m f3-l white"><b>Username:</b> root</div>
+      <div class="font-teko f5 f4-m f3-l white"><b>Password:</b> communism>capitalism</div>
+      </section>
     </section>
 <!-- the penguin image -->
     <section class="self-end gr-start-2 gc-start-1 gc-end-4">
@@ -84,7 +87,26 @@ We're using the Hind font as the default for text. The php is calling the backgr
     <section class="pv5 ph2 flex flex-column items-center bg-sov-red-t8">
       <p class="font-teko b tracked f2 light-yellow self-start self-center-l pl5 pl0-l">ABOUT</p>
   <!-- the <div> below is the text of the section-->
-      <div class="font-hind white flex flex-column">
+      <div class="font-hind white flex flex-column a-blue">
+  <?php
+  $filename = fopen($file, 'r') or die("Unable to open file!");
+  $Parsedown = new Parsedown ();
+  echo $Parsedown->text(fread($filename,filesize($file)));
+  fclose($filename);
+  ?>
+      </div>
+    </section>
+  <?php
+  }
+  ?>
+  <?php
+  $file = "./markdown/main.md";
+  if (file_exists($file)) { ?>
+  <!-- this <p> is the section title -->
+    <section class="pv5 ph2 flex flex-column items-center bg-sov-red-t8 ">
+      <p class="font-teko b tracked f2 light-yellow self-start self-center-l pl5 pl0-l">DOCUMENTATION</p>
+  <!-- the <div> below is the text of the section-->
+      <div class="font-hind white flex flex-column measure a-blue">
   <?php
   $filename = fopen($file, 'r') or die("Unable to open file!");
   $Parsedown = new Parsedown ();
@@ -102,7 +124,7 @@ We're using the Hind font as the default for text. The php is calling the backgr
 <footer class="bg-dark-gray bg-center bg-size-75 bg-50-m" style="background-image: url('<?php echo $bg_image_3; ?>')">
 
 <!-- this section is semi-transparent grey, which lets the <footer> background image show through. It's using flexbox instead of paragraphs so that we can add more links in later and readjust the flow (if needed)-->
-  <section class="pv3 ph2 bg-dark-gray-t9 flex flex-column items-center justify-center">
+  <section class="pv5 ph2 bg-dark-gray-t9 flex flex-column items-center justify-center">
 <!-- This <p> is the title of the content -->
   <p class="font-teko b tracked f2 light-yellow self-start self-center-l pl5 pl0-l">CONTRIBUTE</p>
   <p class="measure-narrow white tc">

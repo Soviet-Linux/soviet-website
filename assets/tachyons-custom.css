@@ -7,6 +7,17 @@
 html {
 scroll-behavior:smooth; 
 }
+
+/* default colours and settings for all links inside markdown */
+.a-blue a:link {
+text-decoration: none;
+color: #a0a0f0;
+}
+.a-blue a:hover {
+text-decoration: underline;
+color: #a0a0f0;
+}
+
 /* fonts
  * The @import gives the font a name and file location for the browser to use. The .font-* class is for inserting the code into the .html file
  */
@@ -300,8 +311,8 @@ animation-name: fade-in-right-wide;
 .grid-row-auto {grid-auto-rows: 1fr;}
 .grid-row-25 {grid-auto-rows: 25vh;}
 .grid-row-50 {grid-auto-rows: 50vh;}
-.grid-row-75 {grid-template-rows: 75vh;}
-.grid-row-100 {grid-template-rows: 100vh;}
+.grid-row-75 {grid-auto-rows: 75vh;}
+.grid-row-100 {grid-auto-rows: 100vh;}
 
 .gc-start-0 {grid-column-start: -1;}
 .gc-start-1 {grid-column-start: 1;}
