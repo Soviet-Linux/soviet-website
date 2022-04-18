@@ -5,8 +5,35 @@
 */
 
 html {
-scroll-behavior:smooth; 
-}
+  scroll-behavior:smooth; 
+  box-sizing: border-box;
+  overflow:hidden;
+  }
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 1px;
+  }
+
+p {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  }
+
+.cover,
+.cover-ns,
+.cover-m,
+.cover-l,
+.contain,
+.contain-ns,
+.contain-m,
+.contain-l {
+  background-repeat: no-repeat;
+  }
 
 /* default colours and settings for all links inside markdown */
 .a-blue a:link {
@@ -46,6 +73,19 @@ color: #a0a0f0;
 
 /* tachyons doesn't have these normally ? */
 
+.mvh-25 {
+  max-height: 25vh;
+  }
+.mvh-50 {
+  max-height: 50vh;
+  }
+.mvh-75 {
+  max-height: 75vh;
+  }
+.mvh-100 {
+  max-height: 100vh;
+  }
+
 .mt-auto {
 margin-top: auto;
 }
@@ -66,42 +106,73 @@ margin-right: auto;
 .bg-scroll {
   background-attachment: scroll;
   }
-/* if the background is bigger than the available screen size, these control where the image is anchored, and changes what you'll see
+/* if the background is bigger or smaller than the available screen size, these control where the image is anchored, and changes what you'll see
  */
 .bg-lefttop {
   background-position: left top;
+  background-repeat: no-repeat;
   }
 .bg-leftbottom {
   background-position: left bottom;
+  background-repeat: no-repeat;
   }
 .bg-righttop {
   background-position: right top;
+  background-repeat: no-repeat;
   }
 .bg-rightbottom {
   background-position: right bottom;
+  background-repeat: no-repeat;
   }
 /* the background image defaults to 100% size, whatever it's pixel dimensions are. These shrink the image, if desired
  * */
-.bg-size-5 {
+.bg-size-w5 {
   background-size: 5%;
   }
-.bg-size-10 {
+.bg-size-w10 {
   background-size: 10%;
   }
-.bg-size-15 {
+.bg-size-w15 {
   background-size: 15%;
   }
-.bg-size-20 {
+.bg-size-w20 {
   background-size: 20%;
   }
-.bg-size-25 {
+.bg-size-w25 {
   background-size: 25%;
   }
-.bg-size-50 {
+.bg-size-w50 {
   background-size: 50%;
   }
-.bg-size-75 {
+.bg-size-w75 {
   background-size: 75%;
+  }
+.bg-size-w100 {
+  background-size: 100%;
+  }
+.bg-size-h5 {
+  background-size: auto 5vh;
+  }
+.bg-size-h10 {
+  background-size: auto 10vh;
+  }
+.bg-size-h15 {
+  background-size: auto 15vh;
+  }
+.bg-size-h20 {
+  background-size: auto 20vh;
+  }
+.bg-size-h25 {
+  background-size: auto 25vh;
+  }
+.bg-size-h50 {
+  background-size: auto 50vh;
+  }
+.bg-size-h75 {
+  background-size: auto 75vh;
+  }
+.bg-size-h100 {
+  background-size: auto 100vh;
   }
 
 /* these are all Tachyon's headers, titles, basically the big letters. The padding defaults are terrible, and we'll assign them as needed using classes
@@ -134,6 +205,29 @@ color: #782121;
 /* 90% opaque, 10% transparent */
 .bg-sov-red-t9 {
  background-color:rgba(121,32,32,0.9);
+  }
+
+.sov-yellow {
+color: #d4aa00;
+}
+.hover-sov-yellow:hover {
+color: #d4aa00;
+}
+/* background colour */
+.bg-sov-yellow {
+ background-color: #d4aa00;
+  }
+/* put your mouse over an object, it turns this colour */
+.hover-bg-sov-yellow:hover {
+ background-color: #d4aa00;
+  }
+/* 80% opaque, 20% transparent */
+.bg-sov-yellow-t8 {
+ background-color:rgba(212,170,0,0.8);
+ }
+/* 90% opaque, 10% transparent */
+.bg-sov-yellow-t9 {
+ background-color:rgba(212,170,0,0.9);
   }
 /* overriding the default, for accessability improvement */
 .dark-gray {
@@ -294,25 +388,96 @@ animation-name: fade-in-right-wide;
     {opacity:1; transform: translate3D(0vh,0,0);}
 }
 
-.mvh-25 {max-height: 25vh;}
-.mvh-50 {max-height: 50vh;}
-.mvh-75 {max-height: 75vh;}
-.mvh-100 {max-height: 100vh;}
+
+}
+.ani-fade-in-left {
+animation-name: fade-in-left;
+}
+@keyframes fade-in-left {
+    from
+    {opacity:0; transform: translate3D(-15vh,0,0);}
+    to
+    {opacity:1; transform: translate3D(0vh,0,0);}
+}
+.ani-fade-in-left-wide {
+animation-name: fade-in-left-wide;
+}
+@keyframes fade-in-left-wide {
+    from
+    {opacity:0; transform: translate3D(-30vh,0,0);}
+    to
+    {opacity:1; transform: translate3D(0vh,0,0);}
+}
+
+/* parallax - use with caution */
+.parallax {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  transform-style: preserve-3d;
+  }
+.plx-fore-1:before,
+.plx-fore-2,
+.plx-fore-3,
+.plx-fore-4,
+.plx-center,
+.plx-back-1:before,
+.plx-back-2,
+.plx-back-3,
+.plx-back-4
+ {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  content: "";
+  }
+
+.plx-fore-1  {
+  transform: translate3D(0,0,0.2px) scale(0.8);
+}
+.plx-fore-2   {
+  transform: translate3D(0,0,0.4px) scale(0.6);
+}
+.plx-fore-3   {
+  transform: translate3D(0,0,0.6px) scale(0.4);
+}
+.plx-fore-4   {
+  transform: translate3D(0,0,0.8px) scale(0.2);
+}
+.plx-center  {
+  transform: translate3D(0,0,0px) scale(1);
+}
+  
+.plx-back-1   {
+  transform: translate3D(0,0,-0.5px) scale(1.6);
+}
+.plx-back-2  {
+  transform: translate3D(0,0,-1px) scale(2.1);
+}
+.plx-back-3  {
+  transform: translate3D(0,0,-1.5px) scale(3.6);
+}
+.plx-back-4  {
+  transform: translate3D(0,0,-2px) scale(4.1);
+}
 
 /* why u no have grid layout??? */
-.justify-even {justify-content:space-evenly;}
 .grid {display:grid;}
 .inline-grid {display:inline-grid;}
-.grid-2-column {grid-template-columns: auto auto;}
-.grid-3-column {grid-template-columns: auto auto auto;}
-.grid-4-column {grid-template-columns: auto auto auto auto;}
-.grid-5-column {grid-template-columns: auto auto auto auto auto;}
+.grid-2-column {grid-template-columns: repeat(2, 1fr);}
+.grid-3-column {grid-template-columns: repeat(3, 1fr);}
+.grid-4-column {grid-template-columns: repeat(4, 1fr);}
+.grid-5-column {grid-template-columns: repeat(5, 1fr);}
 
 .grid-row-auto {grid-auto-rows: 1fr;}
-.grid-row-25 {grid-auto-rows: 25vh;}
-.grid-row-50 {grid-auto-rows: 50vh;}
-.grid-row-75 {grid-auto-rows: 75vh;}
-.grid-row-100 {grid-auto-rows: 100vh;}
+.grid-row-25 {grid-auto-rows: min(25vh) 1fr;}
+.grid-row-33,.grid-row-third {grid-auto-rows: min(33.33vh) 1fr;}
+.grid-row-50 {grid-auto-rows: min(50vh) 1fr;}
+.grid-row-66,.grid-row-2third {grid-auto-rows: min(66.66vh) 1fr;}
+.grid-row-75 {grid-auto-rows: min(75vh) 1fr;}
+.grid-row-100 {grid-auto-rows: min(100vh) 1fr;}
 
 .gc-start-0 {grid-column-start: -1;}
 .gc-start-1 {grid-column-start: 1;}
@@ -346,3 +511,219 @@ animation-name: fade-in-right-wide;
 .gr-end-5 {grid-row-end: 5;}
 .gr-end-5 {grid-row-end: 6;}
 
+.gr-self-start {justify-self:start;}
+.gr-self-center {justify-self:center;}
+.gr-self-end {justify-self:end;}
+.gr-self-stretch {justify-self:stretch;}
+
+.gc-self-start {align-self:start;}
+.gc-self-center {align-self:center;}
+.gc-self-end {align-self:end;}
+.gc-self-stretch {align-self:stretch;}
+
+@media screen and (min-width: 30em) {
+.bg-size-w0-ns {  background-size: auto;  }
+.bg-size-w5-ns {  background-size: 5%;  }
+.bg-size-w10-ns {  background-size: 10%;  }
+.bg-size-w15-ns {  background-size: 15%;  }
+.bg-size-w20-ns {  background-size: 20%;  }
+.bg-size-w25-ns {  background-size: 25%;  }
+.bg-size-w50-ns {  background-size: 50%;  }
+.bg-size-w75-ns {  background-size: 75%;  }
+.bg-size-w100-ns {  background-size: 100%;  }
+.bg-size-h0-ns {  background-size: auto auto;  }
+.bg-size-h5-ns {  background-size: auto 5vh;  }
+.bg-size-h10-ns {  background-size: auto 10vh;  }
+.bg-size-h15-ns {  background-size: auto 15vh;  }
+.bg-size-h20-ns {  background-size: auto 20vh;  }
+.bg-size-h25-ns {  background-size: auto 25vh;  }
+.bg-size-h50-ns {  background-size: auto 50vh;  }
+.bg-size-h75-ns {  background-size: auto 75vh;  }
+.bg-size-h100-ns {  background-size: auto 100vh;  }
+.mvh-25-ns {max-height: 25vh;}
+.mvh-50-ns {max-height: 50vh;}
+.mvh-75-ns {max-height: 75vh;}
+.mvh-100-ns {max-height: 100vh;}
+.justify-even-ns {justify-content:space-evenly;}
+.grid-ns {display:grid;}
+.inline-grid-ns {display:inline-grid;}
+.grid-2-column-ns {grid-template-columns: 1fr 1fr;}
+.grid-3-column-ns {grid-template-columns: 1fr 1fr 1fr;}
+.grid-4-column-ns {grid-template-columns: 1fr 1fr 1fr 1fr;}
+.grid-5-column-ns {grid-template-columns: 1fr 1fr 1fr 1fr 1fr;}
+
+.grid-row-auto-ns {grid-auto-rows: 1fr;}
+.grid-row-25-ns {grid-auto-rows: min(25vh) 1fr;}
+.grid-row-33-ns,.grid-row-third-ns {grid-auto-rows: min(33.33vh) 1fr;}
+.grid-row-50-ns {grid-auto-rows: min(50vh) 1fr;}
+.grid-row-66-ns,.grid-row-2third-ns {grid-auto-rows: min(66.66vh) 1fr;}
+.grid-row-75-ns {grid-auto-rows: min(75vh) 1fr;}
+.grid-row-100-ns {grid-auto-rows: min(100vh) 1fr;}
+
+.gc-start-0-ns {grid-column-start: -1;}
+.gc-start-1-ns {grid-column-start: 1;}
+.gc-start-2-ns {grid-column-start: 2;}
+.gc-start-3-ns {grid-column-start: 3;}
+.gc-start-4-ns {grid-column-start: 4;}
+.gc-start-5-ns {grid-column-start: 5;}
+.gc-start-5-ns {grid-column-start: 6;}
+
+.gr-start-0-ns {grid-row-start: -1;}
+.gr-start-1-ns {grid-row-start: 1;}
+.gr-start-2-ns {grid-row-start: 2;}
+.gr-start-3-ns {grid-row-start: 3;}
+.gr-start-4-ns {grid-row-start: 4;}
+.gr-start-5-ns {grid-row-start: 5;}
+
+.gc-end-0-ns {grid-column-end: -1;}
+.gc-end-1-ns {grid-column-end: 1;}
+.gc-end-2-ns {grid-column-end: 2;}
+.gc-end-3-ns {grid-column-end: 3;}
+.gc-end-4-ns {grid-column-end: 4;}
+.gc-end-5-ns {grid-column-end: 5;}
+
+.gr-end-0-ns {grid-row-end: -1;}
+.gr-end-1-ns {grid-row-end: 1;}
+.gr-end-2-ns {grid-row-end: 2;}
+.gr-end-3-ns {grid-row-end: 3;}
+.gr-end-4-ns {grid-row-end: 4;}
+.gr-end-5-ns {grid-row-end: 5;}
+}
+
+@media screen and (min-width: 30em) and (max-width: 60em) {
+.bg-size-w0-m {  background-size: auto;  }
+.bg-size-w5-m {  background-size: 5%;  }
+.bg-size-w10-m {  background-size: 10%;  }
+.bg-size-w15-m {  background-size: 15%;  }
+.bg-size-w20-m {  background-size: 20%;  }
+.bg-size-w25-m {  background-size: 25%;  }
+.bg-size-w50-m {  background-size: 50%;  }
+.bg-size-w75-m {  background-size: 75%;  }
+.bg-size-w100-m {  background-size: 100%;  }
+.bg-size-h0-m {  background-size: auto auto;  }
+.bg-size-h5-m {  background-size: auto 5vh;  }
+.bg-size-h10-m {  background-size: auto 10vh;  }
+.bg-size-h15-m {  background-size: auto 15vh;  }
+.bg-size-h20-m {  background-size: auto 20vh;  }
+.bg-size-h25-m {  background-size: auto 25vh;  }
+.bg-size-h50-m {  background-size: auto 50vh;  }
+.bg-size-h75-m {  background-size: auto 75vh;  }
+.bg-size-h100-m {  background-size: auto 100vh;  }
+.mvh-25-m {max-height: 25vh;}
+.mvh-50-m {max-height: 50vh;}
+.mvh-75-m {max-height: 75vh;}
+.mvh-100-m {max-height: 100vh;}
+.justify-even-m {justify-content:space-evenly;}
+.grid-m {display:grid;}
+.inline-grid-m {display:inline-grid;}
+.grid-2-column-m {grid-template-columns: 1fr 1fr;}
+.grid-3-column-m {grid-template-columns: 1fr 1fr 1fr;}
+.grid-4-column-m {grid-template-columns: 1fr 1fr 1fr 1fr;}
+.grid-5-column-m {grid-template-columns: 1fr 1fr 1fr 1fr 1fr;}
+
+.grid-row-auto-m {grid-auto-rows: 1fr;}
+.grid-row-25-m {grid-auto-rows: min(25vh) 1fr;}
+.grid-row-33-m,.grid-row-third-m {grid-auto-rows: min(33.33vh) 1fr;}
+.grid-row-50-m {grid-auto-rows: min(50vh) 1fr;}
+.grid-row-66-m,.grid-row-2third-m {grid-auto-rows: min(66.66vh) 1fr;}
+.grid-row-75-m {grid-auto-rows: min(75vh) 1fr;}
+.grid-row-100-m {grid-auto-rows: min(100vh) 1fr;}
+
+.gc-start-0-m {grid-column-start: -1;}
+.gc-start-1-m {grid-column-start: 1;}
+.gc-start-2-m {grid-column-start: 2;}
+.gc-start-3-m {grid-column-start: 3;}
+.gc-start-4-m {grid-column-start: 4;}
+.gc-start-5-m {grid-column-start: 5;}
+.gc-start-5-m {grid-column-start: 6;}
+
+.gr-start-0-m {grid-row-start: -1;}
+.gr-start-1-m {grid-row-start: 1;}
+.gr-start-2-m {grid-row-start: 2;}
+.gr-start-3-m {grid-row-start: 3;}
+.gr-start-4-m {grid-row-start: 4;}
+.gr-start-5-m {grid-row-start: 5;}
+
+.gc-end-0-m {grid-column-end: -1;}
+.gc-end-1-m {grid-column-end: 1;}
+.gc-end-2-m {grid-column-end: 2;}
+.gc-end-3-m {grid-column-end: 3;}
+.gc-end-4-m {grid-column-end: 4;}
+.gc-end-5-m {grid-column-end: 5;}
+
+.gr-end-0-m {grid-row-end: -1;}
+.gr-end-1-m {grid-row-end: 1;}
+.gr-end-2-m {grid-row-end: 2;}
+.gr-end-3-m {grid-row-end: 3;}
+.gr-end-4-m {grid-row-end: 4;}
+.gr-end-5-m {grid-row-end: 5;}
+}
+
+@media screen and (min-width: 80em) {
+.bg-size-w0-l {  background-size: auto;  }
+.bg-size-w5-l {  background-size: 5%;  }
+.bg-size-w10-l {  background-size: 10%;  }
+.bg-size-w15-l {  background-size: 15%;  }
+.bg-size-w20-l {  background-size: 20%;  }
+.bg-size-w25-l {  background-size: 25%;  }
+.bg-size-w50-l {  background-size: 50%;  }
+.bg-size-w75-l {  background-size: 75%;  }
+.bg-size-w100-l {  background-size: 100%;  }
+.bg-size-h0-l {  background-size: auto auto;  }
+.bg-size-h5-l {  background-size: auto 5vh;  }
+.bg-size-h10-l {  background-size: auto 10vh;  }
+.bg-size-h15-l {  background-size: auto 15vh;  }
+.bg-size-h20-l {  background-size: auto 20vh;  }
+.bg-size-h25-l {  background-size: auto 25vh;  }
+.bg-size-h50-l {  background-size: auto 50vh;  }
+.bg-size-h75-l {  background-size: auto 75vh;  }
+.bg-size-h100-l {  background-size: auto 100vh;  }
+.mvh-25-l {max-height: 25vh;}
+.mvh-50-l {max-height: 50vh;}
+.mvh-75-l {max-height: 75vh;}
+.mvh-100-l {max-height: 100vh;}
+.justify-even-l {justify-content:space-evenly;}
+.grid-l {display:grid;}
+.inline-grid-l {display:inline-grid;}
+.grid-2-column-l {grid-template-columns: 1fr 1fr;}
+.grid-3-column-l {grid-template-columns: 1fr 1fr 1fr;}
+.grid-4-column-l {grid-template-columns: 1fr 1fr 1fr 1fr;}
+.grid-5-column-l {grid-template-columns: 1fr 1fr 1fr 1fr 1fr;}
+
+.grid-row-auto-l {grid-auto-rows: 1fr;}
+.grid-row-25-l {grid-auto-rows: min(25vh) 1fr;}
+.grid-row-33-l,.grid-row-third-l {grid-auto-rows: min(33.33vh) 1fr;}
+.grid-row-50-l {grid-auto-rows: min(50vh) 1fr;}
+.grid-row-66-l,.grid-row-2third-l {grid-auto-rows: min(66.66vh) 1fr;}
+.grid-row-75-l {grid-auto-rows: min(75vh) 1fr;}
+.grid-row-100-l {grid-auto-rows: min(100vh) 1fr;}
+
+.gc-start-0-l {grid-column-start: -1;}
+.gc-start-1-l {grid-column-start: 1;}
+.gc-start-2-l {grid-column-start: 2;}
+.gc-start-3-l {grid-column-start: 3;}
+.gc-start-4-l {grid-column-start: 4;}
+.gc-start-5-l {grid-column-start: 5;}
+.gc-start-5-l {grid-column-start: 6;}
+
+.gr-start-0-l {grid-row-start: -1;}
+.gr-start-1-l {grid-row-start: 1;}
+.gr-start-2-l {grid-row-start: 2;}
+.gr-start-3-l {grid-row-start: 3;}
+.gr-start-4-l {grid-row-start: 4;}
+.gr-start-5-l {grid-row-start: 5;}
+
+.gc-end-0-l {grid-column-end: -1;}
+.gc-end-1-l {grid-column-end: 1;}
+.gc-end-2-l {grid-column-end: 2;}
+.gc-end-3-l {grid-column-end: 3;}
+.gc-end-4-l {grid-column-end: 4;}
+.gc-end-5-l {grid-column-end: 5;}
+
+.gr-end-0-l {grid-row-end: -1;}
+.gr-end-1-l {grid-row-end: 1;}
+.gr-end-2-l {grid-row-end: 2;}
+.gr-end-3-l {grid-row-end: 3;}
+.gr-end-4-l {grid-row-end: 4;}
+.gr-end-5-l {grid-row-end: 5;}
+}

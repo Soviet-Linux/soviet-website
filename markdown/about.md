@@ -7,5 +7,3 @@ It does _lots_ of things:
 + logs out
 + fully keyboard capable
 + displays hammer & sickle graphic
-
-[Deez Nuts](https://deez.nutz)
