@@ -43,7 +43,7 @@ We're using the Hind font as the default for text.
 <body class="font-hind bg-black">
 <header class="grid grid-3-column grid-row-50 parallax z-0 gr-start-1 gr-end-4">
   
-  <section class="plx-back-4 z-1 gr-start-1 gr-end-3 gc-start-1 gc-end-6 cover bg-size-w50-l ani-fade-in ani-1s" style="background-image:url('./assets/rays.svg');">
+  <section class="plx-back-4 z-1 gr-start-1 gr-end-3 gc-start-1 gc-end-5 cover ani-fade-in ani-1s" style="background-image:url('./assets/rays.svg');">
   </section>
   
   <section class="plx-back-3 z-1 gr-start-1 gr-end-3 gc-start-1 gc-start-2-m

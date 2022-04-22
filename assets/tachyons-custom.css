@@ -364,7 +364,7 @@ animation-name: fade-in-top;
     {opacity:1; transform: translate3D(0,0vh,0);}
 }
 .ani-fade-in-bottom {
-animation-name: fade-in-top;
+animation-name: fade-in-bottom;
 }
 @keyframes fade-in-bottom {
     from
@@ -429,14 +429,14 @@ animation-name: fade-in-left-wide;
   transform-style: preserve-3d;
   }
 .plx-fore-1:before,
-.plx-fore-2,
-.plx-fore-3,
-.plx-fore-4,
-.plx-center,
+.plx-fore-2:before,
+.plx-fore-3:before,
+.plx-fore-4:before,
+.plx-center:before,
 .plx-back-1:before,
-.plx-back-2,
-.plx-back-3,
-.plx-back-4
+.plx-back-2:before,
+.plx-back-3:before,
+.plx-back-4:before
  {
   position: absolute;
   top: 0px;
