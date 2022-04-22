@@ -82,7 +82,7 @@ We're using the Hind font as the default for text.
     <div class="f1 tc white pr2">&#9733;</div>
     <!-- the href in this <a> section below is the link to the torrent file -->
     <a class="linux no-underline ph3 pt3 pb2 bg-sov-red hover-bg-dark-red yellow font-teko b f4 f3-s f2-l tc bg-animate ba bw1 bw2-m b--dark-gray br3"
-    href=".assets/soviet-grub-0.1.1.iso.torrent" download
+    href="./assets/soviet-grub-0.1.1.iso.torrent" download
     >
 <!-- I'm calling it soviet-current.iso, but if there's a better name go ahead and change it -->
       Torrent File
