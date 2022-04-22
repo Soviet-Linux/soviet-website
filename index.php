@@ -31,22 +31,23 @@ Do not change anything unless you know what you're doing!
   <style>
   </style>
   <?php
-    include 'php/php_scripts.php';
     include 'php/Parsedown.php';
   ?>
 </head>
 
 <!--
 Below here is the visible part of the website. Any classes added to the body tag will be applied to the whole site, unless they're overridden in the tags below.
-We're using the Hind font as the default for text. The php is calling the background image that shows through the rays -->
-<body class="font-hind bg-top-l cover bg-sov-red">
+We're using the Hind font as the default for text.
+
+ -->
+<body class="font-hind bg-black">
 <header class="grid grid-3-column grid-row-50 parallax z-0 gr-start-1 gr-end-4">
   
-  <section class="plx-back-4 z-1 gr-start-1 gr-end-4 gc-start-1 gc-end-6 cover bg-size-w50-l ani-fade-in ani-1s" style="background-image:url('./assets/rays.svg');">
+  <section class="plx-back-4 z-1 gr-start-1 gr-end-3 gc-start-1 gc-end-6 cover bg-size-w50-l ani-fade-in ani-1s" style="background-image:url('./assets/rays.svg');">
   </section>
   
-  <section class="plx-back-2 z-1 gr-start-1 gr-end-3 gc-start-1 gc-start-2-m
-  gc-start-3-l cover ani-fade-in ani-1s ani-delay-1s ani-backwards" style="background-image:url('./assets/lenin_inv.svg');">
+  <section class="plx-back-3 z-1 gr-start-1 gr-end-3 gc-start-1 gc-start-2-m
+  gc-start-3-l bg-size-h75 bg-center ani-fade-in ani-1s ani-delay-1s ani-backwards" style="background-image:url('./assets/lenin_inv.svg');">
   </section>
   
   <section class="plx-back-1 z-2 gr-start-1 gr-end-3 gc-start-1 gc-end-4 gc-end-3-l bg-leftbottom bg-size-w100 bg-size-h50-ns ani-fade-in ani-2s" style="background-image:url('./assets/sov_flag-angle.svg');">
@@ -61,7 +62,7 @@ We're using the Hind font as the default for text. The php is calling the backgr
   <section class="plx-back-1 z-4 gc-self-center gr-start-1 gc-start-1 gc-end-4">
   <div class="tc dib w-100 font-russian f1 f-headline-l white tracked">
   SOVIET &#9773; LINUX
-    <div class="font-teko f4 f3-m f2-l tracked">A source-based distribution for the people
+    <div class="font-teko f4 f3-m f2-l tracked">The people's distribution
     </div>
   </div>
   </section>
@@ -70,24 +71,43 @@ We're using the Hind font as the default for text. The php is calling the backgr
 
 <!-- the main content of the page - more stuff will come in here eventually.
  Right now, <main> is acting as a container for the content. It's got the fixed position background image for the section, and the php calls an image from the randomizer -->
-<main class="relative z-4 bg-sov-red bg-center bg-top-l contain bg-fixed bg-animate bb bw2 bw3-l b--dark-gray" style="background-image: url('./images/popup_marx_engels_lenin.jpg');">
-<aside class="relative tc z-4 vh-50 flex flex-column items-center justify-center bg-sov-yellow-t9 bt bb bw2 bw3-ns b--dark-gray">
-  <section class="flex flex-row items-center">
+<main class="relative z-4 bg-sov-red bg-center bg-top-l contain bg-fixed bg-animate bb bw2 bw3-l b--dark-gray" style="background-image: url('./images/unbreakable_union.jpg');">
+<aside class="relative z-4 bg-center bg-top-l contain bg-fixed" style="background-image: url('./images/popup_marx_engels_lenin.jpg');">
+    <section class="tc mnvh-50 pv3 flex flex-column items-center justify-center bg-sov-yellow-t9 bt bb bw2 bw3-ns b--dark-grayflex flex-column justify-center">
+  
+  <p class="font-teko b tracked f2 sov-red self-start self-center-l pl5 pl0-l">DOWNLOAD</p>
+    <section class="z-5 w-100 flex flex-row justify-center">
+
     <!-- left star -->
-    <div class="dib f1 tc white pr2">&#9733;</div>
+    <div class="f1 tc white pr2">&#9733;</div>
+    <!-- the href in this <a> section below is the link to the torrent file -->
+    <a class="linux no-underline ph3 pt3 pb2 bg-sov-red hover-bg-dark-red yellow font-teko b f4 f3-s f2-l tc bg-animate ba bw1 bw2-m b--dark-gray br3"
+    href=".assets/soviet-grub-0.1.1.iso.torrent" download
+    >
+<!-- I'm calling it soviet-current.iso, but if there's a better name go ahead and change it -->
+      Torrent File
+    </a>
+    <a class="linux no-underline ph3 mh1 pt3 pb2 bg-sov-red hover-bg-dark-red yellow font-teko b f4 f3-s f2-l tc bg-animate ba bw1 bw2-m b--dark-gray br3"
+    href="magnet:?xt=urn:btih:c50fa8947f4511309f50dd1552348f988031c2a6&dn=soviet-grub-0.1.1.iso&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2810%2Fannounce&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=http%3A%2F%2Fopenbittorrent.com%3A80%2Fannounce"
+    >
+<!-- I'm calling it soviet-current.iso, but if there's a better name go ahead and change it -->
+      Magnet Link
+    </a>
 <!-- the href in this <a> section below is the actual link to the iso -->
-    <a class="linux no-underline ph3 pt3 pb2 bg-sov-red hover-bg-dark-red yellow font-teko b f3 f2-s f1-l f3 tc bg-animate ba bw1 bw2-m b--dark-gray br3"
+    <a class="linux no-underline ph3 pt3 pb2 bg-sov-red hover-bg-dark-red yellow font-teko b f4 f3-s f2-l tc bg-animate ba bw1 bw2-m b--dark-gray br3"
     href="https://drive.google.com/file/d/1-jQcLdOwEA-Fzbn1r6LPaY4E5O0TGIwj/view?usp=sharing"
     >
 <!-- I'm calling it soviet-current.iso, but if there's a better name go ahead and change it -->
-      SOVIET-CURRENT.ISO
+      Google Drive
     </a>
+
     <!-- bottom star -->
-    <div class="dib f1 tc white pl2">&#9733;</div>
+    <div class="f1 tc white pl2">&#9733;</div>
   </section>
     <section class="pt4 tracked">
-    <div class="font-teko f5 f4-m f3-l sov-red"><b>Username:</b> root</div>
-    <div class="font-teko f5 f4-m f3-l sov-red"><b>Password:</b> communism>capitalism</div>
+    <div class="font-teko f4 f3-m f2-l sov-red"><b>Username:</b> root</div>
+    <div class="font-teko f4 f3-m f2-l sov-red"><b>Password:</b> communism>capitalism</div>
+  </section>
 </aside>
 <!-- this section is the about info. It's got a semi-transparent background, which lets the image from <main> show through -->
   <?php
@@ -97,7 +117,7 @@ We're using the Hind font as the default for text. The php is calling the backgr
     <section class="z-5 pv5 ph2 flex flex-column items-center bg-sov-red-t9">
       <p class="font-teko b tracked f2 light-yellow self-start self-center-l pl5 pl0-l">ABOUT</p>
   <!-- the <div> below is the text of the section-->
-      <div class="font-hind white flex flex-column a-blue">
+      <div class="font-hind white flex flex-column a-blue measure">
   <?php
   $filename = fopen($file, 'r') or die("Unable to open file!");
   $Parsedown = new Parsedown ();
@@ -136,7 +156,7 @@ We're using the Hind font as the default for text. The php is calling the backgr
 <!-- this section is semi-transparent grey, which lets the <footer> background image show through. It's using flexbox instead of paragraphs so that we can add more links in later and readjust the flow (if needed)-->
   <section class="z-5 pv5 ph2 bg-dark-gray-t8 flex flex-column items-center justify-center">
 <!-- This <p> is the title of the content -->
-  <p class="font-teko b tracked f2 light-yellow self-start self-center-l pl5 pl0-l">CONTRIBUTE</p>
+  <p class="font-teko b tracked f2 light-yellow self-start self-center-l pl5 pl0-l" id="contribute">CONTRIBUTE</p>
   <p class="measure-narrow white tc">
   The revolution is calling your name!<br />
   We could use help in all aspects of building this distribution.</p>

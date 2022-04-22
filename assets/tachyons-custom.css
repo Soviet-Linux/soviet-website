@@ -73,19 +73,31 @@ color: #a0a0f0;
 
 /* tachyons doesn't have these normally ? */
 
-.mvh-25 {
+.mxvh-25 {
   max-height: 25vh;
   }
-.mvh-50 {
+.mxvh-50 {
   max-height: 50vh;
   }
-.mvh-75 {
+.mxvh-75 {
   max-height: 75vh;
   }
-.mvh-100 {
+.mxvh-100 {
   max-height: 100vh;
   }
 
+.mnvh-25 {
+  min-height: 25vh;
+  }
+.mnvh-50 {
+  min-height: 50vh;
+  }
+.mnvh-75 {
+  min-height: 75vh;
+  }
+.mnvh-100 {
+  min-height: 100vh;
+  }
 .mt-auto {
 margin-top: auto;
 }
