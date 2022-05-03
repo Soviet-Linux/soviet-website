@@ -100,6 +100,12 @@ We're using the Hind font as the default for text.
 <!-- I'm calling it soviet-current.iso, but if there's a better name go ahead and change it -->
       Google Drive
     </a>
+    <a class="linux no-underline ph3 mh1 pt3 pb2 bg-sov-red hover-bg-dark-red yellow font-teko b f4 f3-s f2-l tc bg-animate ba bw1 bw2-m b--dark-gray br3"
+    href="https://sovietlinux.ml/iso/0.1.1/soviet-grub-0.1.1.iso"
+    >
+<!-- I'm calling it soviet-current.iso, but if there's a better name go ahead and change it -->
+      Direct Download
+    </a>
 
     <!-- bottom star -->
     <div class="f1 tc white pl2">&#9733;</div>
