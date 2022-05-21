@@ -30,35 +30,47 @@ Do not change anything unless you know what you're doing!
   -->
   <style>
   </style>
+  <!-- we're using Parsedown for the 'about' & 'documentation' sections. Do NOT remove this php include unless you're prepared to rewrite the middle section of the site. -->
   <?php
-    include 'php/Parsedown.php';
+    include 'assets/Parsedown.php';
   ?>
 </head>
 
 <!--
 Below here is the visible part of the website. Any classes added to the body tag will be applied to the whole site, unless they're overridden in the tags below.
 We're using the Hind font as the default for text.
-
  -->
 <body class="font-hind bg-black">
+
+  <!-- the parallax effect is contained within the header tag - this is considered a 'code hack', and every browser update could change the behaviour.
+  - It's totally broken on Webkit.
+  - the z-indexs aren't doing anything on Chrome or Firefox, within the header. They do help with the changeover to the non-parallax sections.
+  - They z-index themselves based on their fore/back number - plx-back-4 will always be behind plx-back-3, plx-fore-4 will always be in front of plx-fore-3, and so on.
+  - if you decide to disbable the parallax effect, git rid of ALL the class tags: parallax, plx-back-*, plx-fore-*. The layout might break otherwise.
+  --> 
 <header class="grid grid-3-column grid-row-50 parallax z-0 gr-start-1 gr-end-4">
-  
+  <!-- the far background - sun rays -->
   <section class="plx-back-4 z-1 gr-start-1 gr-end-3 gc-start-1 gc-end-5 cover ani-fade-in ani-1s" style="background-image:url('./assets/rays.svg');">
   </section>
-  
+
+  <!-- yellow lenin -->
   <section class="plx-back-3 z-1 gr-start-1 gr-end-3 gc-start-1 gc-start-2-m
   gc-start-3-l bg-size-h75 bg-center ani-fade-in ani-1s ani-delay-1s ani-backwards" style="background-image:url('./assets/lenin_inv.svg');">
   </section>
-  
+
+  <!-- soviet flag -->
   <section class="plx-back-1 z-2 gr-start-1 gr-end-3 gc-start-1 gc-end-4 gc-end-3-l bg-leftbottom bg-size-w100 bg-size-h50-ns ani-fade-in ani-2s" style="background-image:url('./assets/sov_flag-angle.svg');">
   </section>
-
+  
+  <!-- penguin with sickle -->
   <section class="z-3 gr-start-2 gc-start-1 gc-start-2-l gc-end-3 bg-bottom bg-size-h25 bg-size-h50-ns bg-rightbottom ani-fade-in-right ani-1s" style="background-image:url('./assets/penguin-sickle.svg');">
   </section>
-  
+
+  <!-- penguin with hammer -->
   <section class="z-4 gr-start-2 gc-start-2 gc-start-3-l gc-end-4 bg-bottom bg-size-h25 bg-size-h50-ns bg-bottom ani-fade-in-right-wide ani-2s" style="background-image:url('./assets/penguin-hammer.svg');">
   </section>
-
+  
+  <!-- site title -->
   <section class="plx-back-1 z-4 gc-self-center gr-start-1 gc-start-1 gc-end-4">
   <div class="tc dib w-100 font-russian f1 f-headline-l white tracked">
   SOVIET &#9773; LINUX
@@ -68,54 +80,55 @@ We're using the Hind font as the default for text.
   </section>
 </header>
 
-
-<!-- the main content of the page - more stuff will come in here eventually.
- Right now, <main> is acting as a container for the content. It's got the fixed position background image for the section, and the php calls an image from the randomizer -->
+<!-- the main content of the page - more stuff will come in here eventually. -->
 <main class="relative z-4 bg-sov-red bg-center bg-top-l contain bg-fixed bg-animate bb bw2 bw3-l b--dark-gray" style="background-image: url('./images/unbreakable_union.jpg');">
-<aside class="relative z-4 bg-center bg-top-l contain bg-fixed" style="background-image: url('./images/popup_marx_engels_lenin.jpg');">
-    <section class="tc mnvh-50 pv3 flex flex-column items-center justify-center bg-sov-yellow-t9 bt bb bw2 bw3-ns b--dark-grayflex flex-column justify-center">
+<!-- the aside contains the download links -->
+<aside class="relative z-4 bg-center bg-top-l contain bg-fixed" style="background-image: url('./assets/popup_marx_engels_lenin.jpg');">
+    <section class="tc mnvh-50 pv5 flex flex-column items-center justify-center bg-sov-yellow-t9 bt bb bw2 bw3-ns b--dark-gray">
   
-  <p class="font-teko b tracked f2 sov-red self-start self-center-l pl5 pl0-l">DOWNLOAD</p>
-    <section class="z-5 w-100 flex flex-row justify-center">
-
-    <!-- left star -->
-    <div class="f1 tc white pr2">&#9733;</div>
-    <!-- the href in this <a> section below is the link to the torrent file -->
-    <a class="linux no-underline ph3 pt3 pb2 bg-sov-red hover-bg-dark-red yellow font-teko b f4 f3-s f2-l tc bg-animate ba bw1 bw2-m b--dark-gray br3"
-    href="./assets/soviet-grub-0.1.1.iso.torrent" download
-    >
-<!-- I'm calling it soviet-current.iso, but if there's a better name go ahead and change it -->
-      Torrent File
-    </a>
-    <a class="linux no-underline ph3 mh1 pt3 pb2 bg-sov-red hover-bg-dark-red yellow font-teko b f4 f3-s f2-l tc bg-animate ba bw1 bw2-m b--dark-gray br3"
-    href="magnet:?xt=urn:btih:c50fa8947f4511309f50dd1552348f988031c2a6&dn=soviet-grub-0.1.1.iso&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2810%2Fannounce&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=http%3A%2F%2Fopenbittorrent.com%3A80%2Fannounce"
-    >
-<!-- I'm calling it soviet-current.iso, but if there's a better name go ahead and change it -->
-      Magnet Link
-    </a>
-<!-- the href in this <a> section below is the actual link to the iso -->
-    <a class="linux no-underline ph3 pt3 pb2 bg-sov-red hover-bg-dark-red yellow font-teko b f4 f3-s f2-l tc bg-animate ba bw1 bw2-m b--dark-gray br3"
-    href="https://drive.google.com/file/d/1-jQcLdOwEA-Fzbn1r6LPaY4E5O0TGIwj/view?usp=sharing"
-    >
-<!-- I'm calling it soviet-current.iso, but if there's a better name go ahead and change it -->
-      Google Drive
-    </a>
-    <a class="linux no-underline ph3 mh1 pt3 pb2 bg-sov-red hover-bg-dark-red yellow font-teko b f4 f3-s f2-l tc bg-animate ba bw1 bw2-m b--dark-gray br3"
-    href="https://sovietlinux.ml/iso/0.1.1/soviet-grub-0.1.1.iso"
-    >
-<!-- I'm calling it soviet-current.iso, but if there's a better name go ahead and change it -->
-      Direct Download
-    </a>
-
-    <!-- bottom star -->
-    <div class="f1 tc white pl2">&#9733;</div>
-  </section>
+      <p class="font-teko b tracked f2 sov-red self-start self-center-l pl5 pl0-l">DOWNLOAD
+      </p>
+  <!-- this section contains a div with a star (#9733), then an number of 'a' links, then another div with star -->
+      <section class="z-5 w-100 flex flex-row justify-center">
+  <!-- left star -->
+      <div class="f1 tc white pr2">&#9733;</div>
+  <!-- torrent file -->
+      <a class="linux no-underline ph3 pt3 pb2 bg-sov-red hover-bg-dark-red yellow font-teko b f4 f3-s f2-l tc bg-animate ba bw1 bw2-m b--dark-gray br3"
+      href="./assets/soviet-grub-0.1.1.iso.torrent" download
+      >
+        Torrent File
+      </a>
+  <!-- magnet file -->
+      <a class="linux no-underline ph3 mh1 pt3 pb2 bg-sov-red hover-bg-dark-red yellow font-teko b f4 f3-s f2-l tc bg-animate ba bw1 bw2-m b--dark-gray br3"
+      href="magnet:?xt=urn:btih:c50fa8947f4511309f50dd1552348f988031c2a6&dn=soviet-grub-0.1.1.iso&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2810%2Fannounce&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=http%3A%2F%2Fopenbittorrent.com%3A80%2Fannounce"
+      >
+        Magnet Link
+      </a>
+  <!-- google drive link -->
+      <a class="linux no-underline ph3 pt3 pb2 bg-sov-red hover-bg-dark-red yellow font-teko b f4 f3-s f2-l tc bg-animate ba bw1 bw2-m b--dark-gray br3"
+      href="https://drive.google.com/file/d/1-jQcLdOwEA-Fzbn1r6LPaY4E5O0TGIwj/view?usp=sharing"
+      >
+        Google Drive
+      </a>
+  <!-- direct download -->
+      <a class="linux no-underline ph3 mh1 pt3 pb2 bg-sov-red hover-bg-dark-red yellow font-teko b f4 f3-s f2-l tc bg-animate ba bw1 bw2-m b--dark-gray br3"
+      href="https://sovietlinux.ml/iso/0.1.1/soviet-grub-0.1.1.iso"
+      >
+        Direct Download
+      </a>
+  
+  <!-- bottom star -->
+      <div class="f1 tc white pl2">&#9733;</div>
+    </section>
     <section class="pt4 tracked">
-    <div class="font-teko f4 f3-m f2-l sov-red"><b>Username:</b> root</div>
-    <div class="font-teko f4 f3-m f2-l sov-red"><b>Password:</b> communism>capitalism</div>
+      <div class="font-teko f4 f3-m f2-l sov-red"><b>Username:</b> root</div>
+      <div class="font-teko f4 f3-m f2-l sov-red"><b>Password:</b> communism>capitalism</div>
+    </section>
   </section>
 </aside>
-<!-- this section is the about info. It's got a semi-transparent background, which lets the image from <main> show through -->
+
+<!-- this section is the about info. It's got a semi-transparent background, which lets the image from show through.
+This whole section uses markdown! Parsedown is required unless you want to rewrite this space. -->
   <?php
   $file = "./markdown/about.md";
   if (file_exists($file)) { ?>
@@ -156,10 +169,10 @@ We're using the Hind font as the default for text.
   ?>
 </main>
 
-<!-- the <footer> is doing the same as <main> right now - it's a container with a background image. The php calls an image from the randomizer -->
+<!-- the <footer> is doing the same as <main> right now - it's a container with a background image. -->
 <footer class="relative z-5 bg-dark-gray bg-top cover bg-size-75 bg-50-m" style="background-image: url('./assets/lenin.svg')">
 
-<!-- this section is semi-transparent grey, which lets the <footer> background image show through. It's using flexbox instead of paragraphs so that we can add more links in later and readjust the flow (if needed)-->
+<!-- this section is semi-transparent grey, which lets the <footer> background image show through. It's using flexbox instead of paragraphs so that we can add more links in later and readjust the flow (if needed) -->
   <section class="z-5 pv5 ph2 bg-dark-gray-t8 flex flex-column items-center justify-center">
 <!-- This <p> is the title of the content -->
   <p class="font-teko b tracked f2 light-yellow self-start self-center-l pl5 pl0-l" id="contribute">CONTRIBUTE</p>
@@ -171,14 +184,16 @@ We're using the Hind font as the default for text.
     <a class="f4 f3-ns no-underline hover-bg-sov-red br2 mv1" href="https://discord.gg/pTFJjckEjp">
       <figure class="tc" style="">
       <img class="h3" src="assets/discord-white.svg" alt="official logo for discord.com">
-      <figcaption class="font-teko light-yellow tx-lw-small">Discord - come here to join our community and interact with the creators.</figcaption>
+      <figcaption class="font-teko light-yellow tx-lw-small">DISCORD<br />
+      come here to join our community and interact with the creators.</figcaption>
       </figure>
       </a>
 <!-- Github -->
     <a class="f4 f3-ns no-underline hover-bg-sov-red br2 mv1" href="https://github.com/Soviet-Linux/">
       <figure class="tc" style="">
       <img class="h3" src="assets/github-white.svg" alt="official logo for Github.com">
-      <figcaption class="font-teko light-yellow">Github - view our code and join our development process.</figcaption>
+      <figcaption class="font-teko light-yellow">GITHUB<br />
+      view our code and join our development process.</figcaption>
       </figure>
     </a>
   </section>

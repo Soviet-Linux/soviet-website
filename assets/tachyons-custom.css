@@ -49,22 +49,15 @@ color: #a0a0f0;
  * The @import gives the font a name and file location for the browser to use. The .font-* class is for inserting the code into the .html file
  */
 @font-face {
-  font-family: 'Teko';
-  src: url('../fonts/Teko-Regular.ttf');
-  }
-.font-teko {
-  font-family: 'Teko', sans-serif;
-}
-@font-face {
   font-family: 'Hind';
-  src: url('../fonts/Hind-Regular.ttf');
+  src: url('../assets/Hind-Regular.ttf');
   }
 .font-hind {
   font-family: 'Hind', sans-serif;
 }
 @font-face {
   font-family: 'Russian';
-  src: url('../fonts/Russian.ttf');
+  src: url('../assets/Russian.ttf');
   }
 .font-russian {
   font-family: 'Russian', sans-serif;
