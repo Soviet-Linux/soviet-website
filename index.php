@@ -81,7 +81,7 @@ We're using the Hind font as the default for text.
 </header>
 
 <!-- the main content of the page - more stuff will come in here eventually. -->
-<main class="relative z-4 bg-sov-red bg-center bg-top-l contain bg-fixed bg-animate bb bw2 bw3-l b--dark-gray" style="background-image: url('./images/unbreakable_union.jpg');">
+<main class="relative z-4 bg-sov-red bg-center bg-top-l contain bg-fixed bg-animate bb bw2 bw3-l b--dark-gray" style="background-image: url('./assets/unbreakable_union.jpg');">
 <!-- the aside contains the download links -->
 <aside class="relative z-4 bg-center bg-top-l contain bg-fixed" style="background-image: url('./assets/popup_marx_engels_lenin.jpg');">
     <section class="tc mnvh-50 pv5 flex flex-column items-center justify-center bg-sov-yellow-t9 bt bb bw2 bw3-ns b--dark-gray">
