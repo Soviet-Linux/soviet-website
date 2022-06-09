@@ -88,38 +88,44 @@ We're using the Hind font as the default for text.
   
       <p class="font-teko b tracked f2 sov-red self-start self-center-l pl5 pl0-l">DOWNLOAD
       </p>
-  <!-- this section contains a div with a star (#9733), then an number of 'a' links, then another div with star -->
-      <section class="z-5 w-100 flex flex-row justify-center">
+      
+  <!-- this section contains an number of 'a' links to download Soviet. There are 3 sections, each with 2 links. The top row also has two stars -->
+  
+  <!-- magnets -->
+  <section class="z-5 w-100 flex flex-column flex-row-ns flex-wrap justify-center pb3">
   <!-- left star -->
       <div class="f1 tc white pr2">&#9733;</div>
-  <!-- torrent file -->
-      <a class="linux no-underline ph3 pt3 pb2 bg-sov-red hover-bg-dark-red yellow font-teko b f4 f3-s f2-l tc bg-animate ba bw1 bw2-m b--dark-gray br3"
-      href="./assets/soviet-grub-0.1.1.iso.torrent" download
+  <!-- iso magnet file -->
+      <a class="linux no-underline mh2 ph3 pt3 pb2 bg-sov-red hover-bg-dark-red yellow font-teko b f4 f3-s f2-l tc bg-animate ba bw1 bw2-m b--dark-gray br3"
+      href="magnet:?xt=urn:btih:178ab85f426b922b2143033a0b05bf2e62e29a6e&dn=soviet-linux-x86%5F64-0.1.3.iso&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce"
       >
-        Torrent File
+        ISO Magnet Link
       </a>
-  <!-- magnet file -->
-      <a class="linux no-underline ph3 mh1 pt3 pb2 bg-sov-red hover-bg-dark-red yellow font-teko b f4 f3-s f2-l tc bg-animate ba bw1 bw2-m b--dark-gray br3"
-      href="magnet:?xt=urn:btih:c50fa8947f4511309f50dd1552348f988031c2a6&dn=soviet-grub-0.1.1.iso&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2810%2Fannounce&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=http%3A%2F%2Fopenbittorrent.com%3A80%2Fannounce"
+  <!-- rootfs magnet file -->
+      <a class="linux no-underline mh2 ph3 pt3 pb2 bg-sov-red hover-bg-dark-red yellow font-teko b f4 f3-s f2-l tc bg-animate ba bw1 bw2-m b--dark-gray br3"
+      href="magnet:?xt=urn:btih:287baa523c236a9788eacd427b15fbdcfe06d296&dn=Soviet_Linux-rootfs-20220607&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce"
       >
-        Magnet Link
+        rootfs Magnet Link
       </a>
-  <!-- google drive link -->
-      <a class="linux no-underline ph3 pt3 pb2 bg-sov-red hover-bg-dark-red yellow font-teko b f4 f3-s f2-l tc bg-animate ba bw1 bw2-m b--dark-gray br3"
-      href="https://drive.google.com/file/d/1-jQcLdOwEA-Fzbn1r6LPaY4E5O0TGIwj/view?usp=sharing"
-      >
-        Google Drive
-      </a>
-  <!-- direct download -->
-      <a class="linux no-underline ph3 mh1 pt3 pb2 bg-sov-red hover-bg-dark-red yellow font-teko b f4 f3-s f2-l tc bg-animate ba bw1 bw2-m b--dark-gray br3"
-      href="https://sovietlinux.ml/iso/0.1.1/soviet-grub-0.1.1.iso"
-      >
-        Direct Download
-      </a>
-  
-  <!-- bottom star -->
       <div class="f1 tc white pl2">&#9733;</div>
+  </section>
+
+  <!-- direct -->
+     <section class="z-5 w-100 flex flex-column flex-row-ns flex-wrap justify-center">
+  <!-- iso google drive link -->
+      <a class="linux no-underline mh2 ph3 pt3 pb2 bg-sov-red hover-bg-dark-red yellow font-teko b f4 f3-s f2-l tc bg-animate ba bw1 bw2-m b--dark-gray br3"
+      href="https://drive.google.com/file/d/1ucaO4bZ5O8hMuSf2lBhPJNWl1qDcNbLL/view?usp=drivesdk"
+      >
+        ISO Direct
+      </a>
+  <!-- rootfs direct download   -->
+      <a class="linux no-underline mh2 ph3 pt3 pb2 bg-sov-red hover-bg-dark-red yellow font-teko b f4 f3-s f2-l tc bg-animate ba bw1 bw2-m b--dark-gray br3"
+      href="https://sovietlinux.ml/rootfs/soviet-rootfs-20220607.tar.gz"
+      >
+        rootfs Direct
+      </a>
     </section>
+    
     <section class="pt4 tracked">
       <div class="font-teko f4 f3-m f2-l sov-red"><b>Username:</b> root</div>
       <div class="font-teko f4 f3-m f2-l sov-red"><b>Password:</b> communism>capitalism</div>
