@@ -1,0 +1,4 @@
+deploy:local:
+    stage: deploy
+    script:
+        - rsync -r . /var/www/sovietlinux.ml/
