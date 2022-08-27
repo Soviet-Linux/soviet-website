@@ -191,7 +191,7 @@ This whole section uses markdown! Parsedown is required unless you want to rewri
 <!-- there are three external links, that use the same styling. The <a> tag is on the outside on purpose - everything you can see on the browser is part of the link -->
 
 <!-- Discord -->
-    <div class="tc pv2 font-teko tracked white">
+    <div class="tc pt3 font-teko tracked white">
       <figure class="tc" style="">
     <a class="f4 f3-ns db no-underline hover-bg-sov-red br2 pv2 ph1" href="https://discord.gg/pTFJjckEjp">
       <img class="h3" src="assets/discord-white.svg" alt="official logo for discord.com">
@@ -202,24 +202,25 @@ This whole section uses markdown! Parsedown is required unless you want to rewri
       </div>
       
 <!-- Gitlab -->
-    <div class="tc pv2 font-teko tracked white">
-    <a class="f4 f3-ns db no-underline hover-bg-sov-red br2 pv2 ph1" href="https://git.sovietlinux.ml/sovietlinux">
+    <div class="tc pt3 font-teko tracked white">
       <figure class="tc" style="">
+    <a class="f4 f3-ns db no-underline hover-bg-sov-red br2 pv2 ph1" href="https://git.sovietlinux.ml/sovietlinux">
       <img class="h3" src="assets/gitlab-white.svg" alt="official logo for gitlab">
       <figcaption class="light-yellow">GITLAB</figcaption>
-      </figure>
         </a>
+      </figure>
       view our code and join our development process.
       </div>
+      
 <!-- librepay -->
-    <div class="tc pv2 db font-teko tracked white">
-    <a class="f4 f3-ns no-underline hover-bg-sov-red br2 pv2 ph1" href="https://liberapay.com/sovietlinux">
+    <div class="tc pt3 font-teko tracked white">
       <figure class="tc" style="">
+    <a class="f4 f3-ns db no-underline hover-bg-sov-red br2 pv2 ph1" href="https://liberapay.com/sovietlinux">
       <img class="h3" src="assets/libreapay-white.svg" alt="official logo for libreapay.com">
       <figcaption class="light-yellow">LIBREAPAY
       </figcaption>
-      </figure>
     </a>
+      </figure>
     support our server upkeep costs.
       </div>
   </section>
