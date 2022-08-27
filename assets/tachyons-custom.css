@@ -3,6 +3,17 @@
  * 
  * If you add content to this stylesheet, remember that it's read from top to bottom. If there are duplicates, the content that's physically further down the page will be used.
 */
+:root {
+    --fontsize:clamp(14pt,calc(14pt + 1.5vw),18pt);
+    --red: #702020;
+    --red-link:;
+    --red-t9: rgba(121,32,32,0.9);
+    --red-t8: rgba(121,32,32,0.8);
+    --yellow: #d4aa00;
+    --yellow-link:;
+    --yellow-t9: rgba(212,170,0,0.9);
+    --yellow-t8: rgba(212,170,0,0.8);
+    }
 
 html {
   scroll-behavior:smooth; 
@@ -17,8 +28,160 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
   perspective: 1px;
+  font-size: var(--fontsize);
+  }
+  
+/* * * SITE SPECIFIC * * */
+
+/* fonts
+
+ * The @import gives the font a name and file location for the browser to use. The .font-* class is for inserting the code into the .html file
+ */
+
+@font-face {
+  font-family: 'Teko';
+  src: url('../assets/Teko-Regular.ttf');
   }
 
+.font-teko {
+  font-family: 'Teko', sans-serif;
+  }
+
+@font-face {
+  font-family: 'Hind';
+  src: url('../assets/Hind-Regular.ttf');
+  }
+
+.font-hind {
+  font-family: 'Hind', sans-serif;
+}
+
+@font-face {
+  font-family: 'Russian';
+  src: url('../assets/Russian.ttf');
+  }
+
+.font-russian {
+  font-family: 'Russian', sans-serif;
+  }
+
+/* colours !! */
+/* text colour */
+.sov-red {
+color: var(--red);
+}
+
+.hover-sov-red:hover {
+color: var(--red);
+}
+
+/* background colour */
+.bg-sov-red {
+ background-color: var(--red);
+  }
+
+/* put your mouse over an object, it turns this colour */
+.hover-bg-sov-red:hover {
+ background-color: var(--red);
+  }
+
+/* 80% opaque, 20% transparent */
+.bg-sov-red-t8 {
+ background-color:var(--red-t8);
+ }
+
+/* 90% opaque, 10% transparent */
+.bg-sov-red-t9 {
+ background-color:var(--red-t8);
+  }
+
+.sov-yellow {
+color: var(--yellow);
+}
+
+.hover-sov-yellow:hover {
+color: var(--yellow);
+}
+
+/* background colour */
+.bg-sov-yellow {
+ background-color: var(--yellow);
+  }
+
+/* put your mouse over an object, it turns this colour */
+.hover-bg-sov-yellow:hover {
+ background-color: var(--yellow);
+  }
+
+/* 80% opaque, 20% transparent */
+
+.bg-sov-yellow-t8 {
+ background-color:var(--yellow-t8);
+ }
+
+/* 90% opaque, 10% transparent */
+
+.bg-sov-yellow-t9 {
+ background-color:var(--yellow-t8);
+  }
+
+/* overriding the default, for accessability improvement */
+.dark-gray {
+  color: #2d2d2d;
+  }
+
+.bg-dark-gray {
+  background-color: #2d2d2d;
+  }
+
+.bg-dark-gray-t8 {
+  background-color:rgba(45,45,45,0.8);
+  }
+
+.bg-dark-gray-t9 {
+  background-color:rgba(45,45,45,0.9);
+  }
+
+/* default colours and settings for all links inside markdown */
+.a-blue a:link {
+text-decoration: none;
+color: #a0a0f0;
+}
+
+.a-blue a:hover {
+text-decoration: underline;
+color: #a0a0f0;
+}
+
+/* default colours and settings for all links inside markdown */
+.a-light a:link {
+text-decoration: none;
+color: #a0a0f0;
+}
+
+.a-light a:hover {
+text-decoration: underline;
+color: #a0a0f0;
+}
+
+/* default colours and settings for all links inside markdown */
+.a-dark a:link {
+text-decoration: none;
+color: #3030f0;
+}
+
+.a-dark a:hover {
+text-decoration: underline;
+color: #3030f0;
+}
+/* * * GENERAL CODE * * */
+
+/* these are all Tachyon's headers, titles, basically the big letters. The padding defaults are terrible, and we'll assign them as needed using classes
+ */
+h1,h2,h3,h4,h5,h6,f-headline,f-subheadline,f-title,f-subtitle {
+  padding: 0;
+  margin: 0;
+  }
 p {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -34,42 +197,6 @@ p {
 .contain-l {
   background-repeat: no-repeat;
   }
-
-/* default colours and settings for all links inside markdown */
-.a-blue a:link {
-text-decoration: none;
-color: #a0a0f0;
-}
-.a-blue a:hover {
-text-decoration: underline;
-color: #a0a0f0;
-}
-
-/* fonts
- * The @import gives the font a name and file location for the browser to use. The .font-* class is for inserting the code into the .html file
- */
-@font-face {
-  font-family: 'Teko';
-  src: url('../assets/Teko-Regular.ttf');
-  }
-.font-teko {
-  font-family: 'Teko', sans-serif;
-  }
-@font-face {
-  font-family: 'Hind';
-  src: url('../assets/Hind-Regular.ttf');
-  }
-.font-hind {
-  font-family: 'Hind', sans-serif;
-}
-@font-face {
-  font-family: 'Russian';
-  src: url('../assets/Russian.ttf');
-  }
-.font-russian {
-  font-family: 'Russian', sans-serif;
-  }
-
 
 /* tachyons doesn't have these normally ? */
 
@@ -185,74 +312,6 @@ margin-right: auto;
   }
 .bg-size-h100 {
   background-size: auto 100vh;
-  }
-
-/* these are all Tachyon's headers, titles, basically the big letters. The padding defaults are terrible, and we'll assign them as needed using classes
- */
-h1,h2,h3,h4,h5,h6,f-headline,f-subheadline,f-title,f-subtitle {
-  padding: 0;
-  margin: 0;
-  }
-
-/* colours !! */
-/* text colour */
-.sov-red {
-color: #782121;
-}
-.hover-sov-red:hover {
-color: #782121;
-}
-/* background colour */
-.bg-sov-red {
- background-color: #782121;
-  }
-/* put your mouse over an object, it turns this colour */
-.hover-bg-sov-red:hover {
- background-color: #782121;
-  }
-/* 80% opaque, 20% transparent */
-.bg-sov-red-t8 {
- background-color:rgba(121,32,32,0.8);
- }
-/* 90% opaque, 10% transparent */
-.bg-sov-red-t9 {
- background-color:rgba(121,32,32,0.9);
-  }
-
-.sov-yellow {
-color: #d4aa00;
-}
-.hover-sov-yellow:hover {
-color: #d4aa00;
-}
-/* background colour */
-.bg-sov-yellow {
- background-color: #d4aa00;
-  }
-/* put your mouse over an object, it turns this colour */
-.hover-bg-sov-yellow:hover {
- background-color: #d4aa00;
-  }
-/* 80% opaque, 20% transparent */
-.bg-sov-yellow-t8 {
- background-color:rgba(212,170,0,0.8);
- }
-/* 90% opaque, 10% transparent */
-.bg-sov-yellow-t9 {
- background-color:rgba(212,170,0,0.9);
-  }
-/* overriding the default, for accessability improvement */
-.dark-gray {
-  color: #2d2d2d;
-  }
-.bg-dark-gray {
-  background-color: #2d2d2d;
-  }
-.bg-dark-gray-t8 {
-  background-color:rgba(45,45,45,0.8);
-  }
-.bg-dark-gray-t9 {
-  background-color:rgba(45,45,45,0.9);
   }
 
 /* animations */
@@ -428,22 +487,21 @@ animation-name: fade-in-left-wide;
   position: relative;
   transform-style: preserve-3d;
   }
-.plx-fore-1:before,
-.plx-fore-2:before,
-.plx-fore-3:before,
-.plx-fore-4:before,
-.plx-center:before,
-.plx-back-1:before,
-.plx-back-2:before,
-.plx-back-3:before,
-.plx-back-4:before
+.plx-fore-1,
+.plx-fore-2,
+.plx-fore-3,
+.plx-fore-4,
+.plx-center,
+.plx-back-1,
+.plx-back-2,
+.plx-back-3,
+.plx-back-4
  {
   position: absolute;
   top: 0px;
   left: 0px;
   right: 0px;
   bottom: 0px;
-  content: "";
   }
 
 .plx-fore-1  {
@@ -463,16 +521,16 @@ animation-name: fade-in-left-wide;
 }
   
 .plx-back-1   {
-  transform: translate3D(0,0,-0.5px) scale(1.6);
+  transform: translate3D(0,0,-0.5px) scale(1.5);
 }
 .plx-back-2  {
-  transform: translate3D(0,0,-1px) scale(2.1);
+  transform: translate3D(0,0,-1px) scale(2.0);
 }
 .plx-back-3  {
-  transform: translate3D(0,0,-1.5px) scale(3.6);
+  transform: translate3D(0,0,-1.5px) scale(2.5);
 }
 .plx-back-4  {
-  transform: translate3D(0,0,-2px) scale(4.1);
+  transform: translate3D(0,0,-2px) scale(3.0);
 }
 
 /* why u no have grid layout??? */

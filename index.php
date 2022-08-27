@@ -40,44 +40,40 @@ Do not change anything unless you know what you're doing!
 Below here is the visible part of the website. Any classes added to the body tag will be applied to the whole site, unless they're overridden in the tags below.
 We're using the Hind font as the default for text.
  -->
-<body class="font-hind bg-black">
+<body class="font-hind bg-sov-red">
 
   <!-- the parallax effect is contained within the header tag - this is considered a 'code hack', and every browser update could change the behaviour.
-  - It's totally broken on Webkit.
-  - the z-indexs aren't doing anything on Chrome or Firefox, within the header. They do help with the changeover to the non-parallax sections.
-  - They z-index themselves based on their fore/back number - plx-back-4 will always be behind plx-back-3, plx-fore-4 will always be in front of plx-fore-3, and so on.
-  - if you decide to disbable the parallax effect, git rid of ALL the class tags: parallax, plx-back-*, plx-fore-*. The layout might break otherwise.
+  It's totally broken on Webkit.
+  The z-indexs aren't doing anything on Chrome or Firefox, within the header. They do help with the changeover to the non-parallax sections.
+  The actual z-indexing is based on the fore/back number - plx-back-4 will always be behind plx-back-3, plx-fore-4 will always be in front of plx-fore-3, and so on.
+  If you decide to disbable the parallax effect, git rid of ALL the class tags: parallax, plx-back-*, plx-fore-*. The layout might break otherwise.
   --> 
-<header class="grid grid-3-column grid-row-50 parallax z-0 gr-start-1 gr-end-4">
+<header class="parallax vh-50 vh-50-ns vh-100-l">
   <!-- the far background - sun rays -->
-  <section class="plx-back-4 z-1 gr-start-1 gr-end-3 gc-start-1 gc-end-5 cover ani-fade-in ani-1s" style="background-image:url('./assets/rays.svg');">
-  </section>
+    <section id="bg-rays" class="plx-back-4 z-1 vh-100 w-100">
+        <img class="w-100 ani-fade-in ani-2s ani-delay-2s ani-backwards" src="assets/rays.svg" alt="simple sun ray pattern, starting at bottom left">
+    </section>
 
-  <!-- yellow lenin -->
-  <section class="plx-back-3 z-1 gr-start-1 gr-end-3 gc-start-1 gc-start-2-m
-  gc-start-3-l bg-size-h75 bg-center ani-fade-in ani-1s ani-delay-1s ani-backwards" style="background-image:url('./assets/lenin_inv.svg');">
-  </section>
+<!--hammer & sickle sliding in from the left-->
+    <section id="bg-flag" class="plx-back-2 z-2" >
+        <img class="h-25 ani-fade-in-left ani-2s pl5 pt5" src="assets/hamsic.svg" alt="crossed hammer and sickle">
+    </section>
 
-  <!-- soviet flag -->
-  <section class="plx-back-1 z-2 gr-start-1 gr-end-3 gc-start-1 gc-end-4 gc-end-3-l bg-leftbottom bg-size-w100 bg-size-h50-ns ani-fade-in ani-2s" style="background-image:url('./assets/sov_flag-angle.svg');">
-  </section>
-  
-  <!-- penguin with sickle -->
-  <section class="z-3 gr-start-2 gc-start-1 gc-start-2-l gc-end-3 bg-bottom bg-size-h25 bg-size-h50-ns bg-rightbottom ani-fade-in-right ani-1s" style="background-image:url('./assets/penguin-sickle.svg');">
-  </section>
+<!-- lenny moving from the right to the left -->
+    <section id="lenin" class="plx-back-2 z-3 flex items-center justify-end">
+    <img class="h-75 ani-fade-in-right ani-2s ani-delay-1s ani-backwards pr5  " src="assets/lenin_inv.svg" />
+    </section>
 
-  <!-- penguin with hammer -->
-  <section class="z-4 gr-start-2 gc-start-2 gc-start-3-l gc-end-4 bg-bottom bg-size-h25 bg-size-h50-ns bg-bottom ani-fade-in-right-wide ani-2s" style="background-image:url('./assets/penguin-hammer.svg');">
-  </section>
-  
-  <!-- site title -->
-  <section class="plx-back-1 z-4 gc-self-center gr-start-1 gc-start-1 gc-end-4">
-  <div class="tc dib w-100 font-russian f1 f-headline-l white tracked">
-  SOVIET &#9773; LINUX
-    <div class="font-teko f4 f3-m f2-l tracked">The people's distribution
-    </div>
-  </div>
-  </section>
+<!-- Tittle and subtitle-->
+    <section id="title card" class="plx-back-1 z-4 flex flex-column items-center justify-center" style="">
+        <div id="title" class="ani-fade-in ani-15s ani-delay-1s ani-backwards font-russian near-white  f1 f-headline-l tracked">
+        SOVIET &#9773; LINUX
+        </div>
+        <div id="subtitle" class="ani-fade-in ani-1s ani-delay-2s ani-backwards font-teko near-white f2 tracked">
+        The People's Distribution
+        </div>
+        </section>
+
 </header>
 
 <!-- the main content of the page - more stuff will come in here eventually. -->
@@ -128,7 +124,7 @@ We're using the Hind font as the default for text.
     
     <section class="pt4 tracked">
       <div class="font-teko f4 f3-m f2-l sov-red"><b>Username:</b> root</div>
-      <div class="font-teko f4 f3-m f2-l sov-red"><b>Password:</b> communism>capitalism</div>
+      <div class="font-teko f4 f3-m f2-l sov-red"><b>Password:</b>sovietlinux</div>
     </section>
   </section>
 </aside>
@@ -176,32 +172,62 @@ This whole section uses markdown! Parsedown is required unless you want to rewri
 </main>
 
 <!-- the <footer> is doing the same as <main> right now - it's a container with a background image. -->
-<footer class="relative z-5 bg-dark-gray bg-top cover bg-size-75 bg-50-m" style="background-image: url('./assets/lenin.svg')">
+<footer class="relative z-5 bg-dark-gray bg-bottom bg-fixed bg-size-w50" style="background-image: url('./assets/sov_flag-angle.svg')">
 
 <!-- this section is semi-transparent grey, which lets the <footer> background image show through. It's using flexbox instead of paragraphs so that we can add more links in later and readjust the flow (if needed) -->
-  <section class="z-5 pv5 ph2 bg-dark-gray-t8 flex flex-column items-center justify-center">
+  <section class="z-5 pt5 ph2 bg-dark-gray-t8 flex items-start justify-center">
+      <!-- penguin with sickle -->
+    <section class="z-3 self-end tc">
+      <img class="w-50 v-btm" src="assets/penguin-sickle.svg" alt="penguin holding a sickle">
+    </section>
+
+<!-- text -->
+<section class="z-4 flex flex-column items-center pb5">
 <!-- This <p> is the title of the content -->
   <p class="font-teko b tracked f2 light-yellow self-start self-center-l pl5 pl0-l" id="contribute">CONTRIBUTE</p>
-  <p class="measure-narrow white tc">
+  <p class="measure white tc">
   The revolution is calling your name!<br />
   We could use help in all aspects of building this distribution.</p>
-<!-- there are two links to other sites, that use the same styling. The <a> tag is on the outside on purpose - everything you can see on the browser is part of the link -->
+<!-- there are three external links, that use the same styling. The <a> tag is on the outside on purpose - everything you can see on the browser is part of the link -->
+
 <!-- Discord -->
-    <a class="f4 f3-ns no-underline hover-bg-sov-red br2 mv1" href="https://discord.gg/pTFJjckEjp">
+    <div class="tc pv2 font-teko tracked white">
       <figure class="tc" style="">
+    <a class="f4 f3-ns db no-underline hover-bg-sov-red br2 pv2 ph1" href="https://discord.gg/pTFJjckEjp">
       <img class="h3" src="assets/discord-white.svg" alt="official logo for discord.com">
-      <figcaption class="font-teko light-yellow tx-lw-small">DISCORD<br />
-      come here to join our community and interact with the creators.</figcaption>
-      </figure>
+      <figcaption class="light-yellow">DISCORD</figcaption>
       </a>
-<!-- Github -->
-    <a class="f4 f3-ns no-underline hover-bg-sov-red br2 mv1" href="https://github.com/Soviet-Linux/">
+      </figure>
+      join our community and interact with the creators.
+      </div>
+      
+<!-- Gitlab -->
+    <div class="tc pv2 font-teko tracked white">
+    <a class="f4 f3-ns db no-underline hover-bg-sov-red br2 pv2 ph1" href="https://git.sovietlinux.ml/sovietlinux">
       <figure class="tc" style="">
-      <img class="h3" src="assets/github-white.svg" alt="official logo for Github.com">
-      <figcaption class="font-teko light-yellow">GITHUB<br />
-      view our code and join our development process.</figcaption>
+      <img class="h3" src="assets/gitlab-white.svg" alt="official logo for gitlab">
+      <figcaption class="light-yellow">GITLAB</figcaption>
+      </figure>
+        </a>
+      view our code and join our development process.
+      </div>
+<!-- librepay -->
+    <div class="tc pv2 db font-teko tracked white">
+    <a class="f4 f3-ns no-underline hover-bg-sov-red br2 pv2 ph1" href="https://liberapay.com/sovietlinux">
+      <figure class="tc" style="">
+      <img class="h3" src="assets/libreapay-white.svg" alt="official logo for libreapay.com">
+      <figcaption class="light-yellow">LIBREAPAY
+      </figcaption>
       </figure>
     </a>
+    support our server upkeep costs.
+      </div>
+  </section>
+
+  <!-- penguin with hammer -->
+    <section class="z-3 self-end tc">
+      <img class="w-50 v-btm" src="assets/penguin-hammer.svg" alt="penguin holding a hammer">
+    </section>
   </section>
 </footer>
 
