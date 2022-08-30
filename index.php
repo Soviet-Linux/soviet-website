@@ -50,8 +50,7 @@ We're using the Hind font as the default for text.
   --> 
 <header class="parallax vh-50 vh-50-ns vh-100-l">
   <!-- the far background - sun rays -->
-    <section id="bg-rays" class="plx-back-4 z-1 vh-100 w-100">
-        <img class="w-100 ani-fade-in ani-2s ani-delay-2s ani-backwards" src="assets/rays.svg" alt="simple sun ray pattern, starting at bottom left">
+    <section id="bg-rays" class="plx-back-4 z-1 ani-fade-in ani-2s ani-delay-2s ani-backwards cover" style="background-image: url('assets/rays.svg')">
     </section>
 
 <!--hammer & sickle sliding in from the left-->
@@ -185,7 +184,7 @@ This whole section uses markdown! Parsedown is required unless you want to rewri
 <section class="z-4 flex flex-column items-center pb5">
 <!-- This <p> is the title of the content -->
   <p class="font-teko b tracked f2 light-yellow self-start self-center-l pl5 pl0-l" id="contribute">CONTRIBUTE</p>
-  <p class="measure white tc">
+  <p class="measure-l measure-wide-ns white tc">
   The revolution is calling your name!<br />
   We could use help in all aspects of building this distribution.</p>
 <!-- there are three external links, that use the same styling. The <a> tag is on the outside on purpose - everything you can see on the browser is part of the link -->
