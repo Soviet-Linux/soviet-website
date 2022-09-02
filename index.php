@@ -55,7 +55,7 @@ We're using the Hind font as the default for text.
 
 <!--hammer & sickle sliding in from the left-->
     <section id="bg-flag" class="plx-back-2 z-2" >
-        <img class="h-25 ani-fade-in-left ani-2s pl5 pt5" src="assets/hamsic.svg" alt="crossed hammer and sickle">
+        <img class="h4-m h-25-l ani-fade-in-left ani-2s pl5 pt5" src="assets/hamsic.svg" alt="crossed hammer and sickle">
     </section>
 
 <!-- lenny moving from the right to the left -->
@@ -81,51 +81,39 @@ We're using the Hind font as the default for text.
 <aside class="relative z-4 bg-center bg-top-l contain bg-fixed" style="background-image: url('./assets/popup_marx_engels_lenin.jpg');">
     <section class="tc mnvh-50 pv5 flex flex-column items-center justify-center bg-sov-yellow-t9 bt bb bw2 bw3-ns b--dark-gray">
   
-      <p class="font-teko b tracked f2 sov-red self-start self-center-l pl5 pl0-l">DOWNLOAD
+      <p class="font-teko b tracked f2 sov-red self-center">DOWNLOAD
       </p>
       
   <!-- this section contains an number of 'a' links to download Soviet. There are 3 sections, each with 2 links. The top row also has two stars -->
-  
-  <!-- magnets -->
-  <section class="z-5 w-100 flex flex-column flex-row-ns flex-wrap justify-center pb3">
-  <!-- left star -->
-      <div class="f1 tc white pr2">&#9733;</div>
-  <!-- iso magnet file -->
-      <a class="linux no-underline mh2 ph3 pt3 pb2 bg-sov-red hover-bg-dark-red yellow font-teko b f4 f3-s f2-l tc bg-animate ba bw1 bw2-m b--dark-gray br3"
-      href="magnet:?xt=urn:btih:178ab85f426b922b2143033a0b05bf2e62e29a6e&dn=soviet-linux-x86%5F64-0.1.3.iso&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce"
-      >
-        ISO Magnet Link
-      </a>
-  <!-- rootfs magnet file -->
-      <a class="linux no-underline mh2 ph3 pt3 pb2 bg-sov-red hover-bg-dark-red yellow font-teko b f4 f3-s f2-l tc bg-animate ba bw1 bw2-m b--dark-gray br3"
-      href="magnet:?xt=urn:btih:287baa523c236a9788eacd427b15fbdcfe06d296&dn=Soviet_Linux-rootfs-20220607&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce"
-      >
-        rootfs Magnet Link
-      </a>
-      <div class="f1 tc white pl2">&#9733;</div>
-  </section>
-
-  <!-- direct -->
-     <section class="z-5 w-100 flex flex-column flex-row-ns flex-wrap justify-center">
-  <!-- iso google drive link -->
-      <a class="linux no-underline mh2 ph3 pt3 pb2 bg-sov-red hover-bg-dark-red yellow font-teko b f4 f3-s f2-l tc bg-animate ba bw1 bw2-m b--dark-gray br3"
-      href="https://drive.google.com/file/d/1ucaO4bZ5O8hMuSf2lBhPJNWl1qDcNbLL/view?usp=drivesdk"
-      >
-        ISO Direct
-      </a>
-  <!-- rootfs direct download   -->
-      <a class="linux no-underline mh2 ph3 pt3 pb2 bg-sov-red hover-bg-dark-red yellow font-teko b f4 f3-s f2-l tc bg-animate ba bw1 bw2-m b--dark-gray br3"
-      href="https://sovietlinux.ml/rootfs/soviet-rootfs-20220607.tar.gz"
-      >
+<section class="w-100 flex flex-row">
+<div class="z-5 w-50 flex flex-column items-center justify-start pb3 ph3">
+      <!-- rootfs direct download   -->
+      <a class="linux no-underline w-50 ph3 pv3 bg-sov-red hover-bg-dark-red yellow font-teko b f3 f2-l tc bg-animate ba bw1 b--dark-gray br3"
+      href="https://sovietlinux.ml/##">
         rootfs Direct
       </a>
-    </section>
-    
-    <section class="pt4 tracked">
-      <div class="font-teko f4 f3-m f2-l sov-red"><b>Username:</b> root</div>
-      <div class="font-teko f4 f3-m f2-l sov-red"><b>Password:</b>sovietlinux</div>
-    </section>
-  </section>
+      <p class="measure f4 f3-l tl dark-gray">The rootfs is a squashfs that can be extracted into a directory, and accessed through chroot or systemd-nspawn.<br />
+      It can also be manually copied to an already formatted partition and directly booted.
+      </p>
+</div>
+<div class="z-5 w-50 flex flex-column items-center justify-start pb3 ph3">
+      <!-- rootfs direct download   -->
+      <a class="linux no-underline w-50 ph3 pv3 bg-sov-red hover-bg-dark-red yellow font-teko b f3 f2-l tc bg-animate ba bw1 b--dark-gray br3"
+      href="https://sovietlinux.ml/##">
+        img Direct
+      </a>
+      <p class="measure f4 f3-l tl dark-gray">
+          The img file can be copied to a usb device using <code>dd</code> or any other flashing utility. It will boot and function as a live environment. It uses the same files as the <code>rootfs.</code>
+</div>
+</section>
+<section class="pt4 tracked w-100 flex flex-column justify-center items-center pb3">
+      <div class="font-teko f3 f2-l sov-red"><b class="dark-gray">Username:</b> root</div>
+      <div class="font-teko f3 f2-l sov-red"><b class="dark-gray">Password:</b>sovietlinux</div>
+</section>
+</section>
+
+
+</section>
 </aside>
 
 <!-- this section is the about info. It's got a semi-transparent background, which lets the image from show through.
@@ -135,7 +123,7 @@ This whole section uses markdown! Parsedown is required unless you want to rewri
   if (file_exists($file)) { ?>
   <!-- this <p> is the section title -->
     <section class="z-5 pv5 ph2 flex flex-column items-center bg-sov-red-t9">
-      <p class="font-teko b tracked f2 light-yellow self-start self-center-l pl5 pl0-l">ABOUT</p>
+      <p class="font-teko b tracked f2 light-yellow self-center">ABOUT</p>
   <!-- the <div> below is the text of the section-->
       <div class="font-hind white flex flex-column a-blue measure">
   <?php
@@ -154,7 +142,7 @@ This whole section uses markdown! Parsedown is required unless you want to rewri
   if (file_exists($file)) { ?>
   <!-- this <p> is the section title -->
     <section class="z-5 pv5 ph2 self-stretch flex flex-column items-center bg-sov-red-t9">
-      <p class="font-teko b tracked f2 light-yellow self-start self-center-l pl5 pl0-l">DOCUMENTATION</p>
+      <p class="font-teko b tracked f2 light-yellow self-center">DOCUMENTATION</p>
   <!-- the <div> below is the text of the section-->
       <div class="font-hind white flex flex-column measure a-blue">
   <?php
@@ -171,19 +159,19 @@ This whole section uses markdown! Parsedown is required unless you want to rewri
 </main>
 
 <!-- the <footer> is doing the same as <main> right now - it's a container with a background image. -->
-<footer class="relative z-5 bg-dark-gray bg-bottom bg-fixed bg-size-w50" style="background-image: url('./assets/sov_flag-angle.svg')">
+<footer class="relative z-5 bg-dark-gray bg-bottom bg-fixed bg-size-w75-ns bg-size-w50-l" style="background-image: url('./assets/sov_flag-angle.svg')">
 
 <!-- this section is semi-transparent grey, which lets the <footer> background image show through. It's using flexbox instead of paragraphs so that we can add more links in later and readjust the flow (if needed) -->
   <section class="z-5 pt5 ph2 bg-dark-gray-t8 flex items-start justify-center">
       <!-- penguin with sickle -->
     <section class="z-3 self-end tc">
-      <img class="w-50 v-btm" src="assets/penguin-sickle.svg" alt="penguin holding a sickle">
+      <img class="w-75-m w-50-l v-btm" src="assets/penguin-sickle.svg" alt="penguin holding a sickle">
     </section>
 
 <!-- text -->
 <section class="z-4 flex flex-column items-center pb5">
 <!-- This <p> is the title of the content -->
-  <p class="font-teko b tracked f2 light-yellow self-start self-center-l pl5 pl0-l" id="contribute">CONTRIBUTE</p>
+  <p class="font-teko b tracked f2 light-yellow self-center" id="contribute">CONTRIBUTE</p>
   <p class="measure-l measure-wide-ns white tc">
   The revolution is calling your name!<br />
   We could use help in all aspects of building this distribution.</p>
@@ -226,7 +214,7 @@ This whole section uses markdown! Parsedown is required unless you want to rewri
 
   <!-- penguin with hammer -->
     <section class="z-3 self-end tc">
-      <img class="w-50 v-btm" src="assets/penguin-hammer.svg" alt="penguin holding a hammer">
+      <img class="w-75-m w-50-l v-btm" src="assets/penguin-hammer.svg" alt="penguin holding a hammer">
     </section>
   </section>
 </footer>
