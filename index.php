@@ -81,29 +81,33 @@ We're using the Hind font as the default for text.
 <aside class="relative z-4 bg-center bg-top-l contain bg-fixed" style="background-image: url('./assets/popup_marx_engels_lenin.jpg');">
     <section class="tc mnvh-50 pv5 flex flex-column items-center justify-center bg-sov-yellow-t9 bt bb bw2 bw3-ns b--dark-gray">
   
-      <p class="font-teko b tracked f2 sov-red self-center">DOWNLOAD
+      <p class="font-teko b tracked f1 f2-m sov-red self-center">DOWNLOAD
       </p>
-      
+      <p class="measure a-dark">
+      <b>Soviet Linux is in the early stages of development.</b><br />
+       There is active work being done to make <i>Soviet</i> into a fully functional Linux experience. However, at this time it's <b>not</b> suitable for daily use.
+We welcome contributions from interested workers. <a class="" href="#contact">Contact us</a> to see how you can join us.</p>
+
   <!-- this section contains an number of 'a' links to download Soviet. There are 3 sections, each with 2 links. The top row also has two stars -->
 <section class="w-100 flex flex-row">
 <div class="z-5 w-50 flex flex-column items-center justify-start pb3 ph3">
-      <!-- rootfs direct download   -->
+      <!-- tar.xz direct download   -->
       <a class="linux no-underline w-50 ph3 pv3 bg-sov-red hover-bg-dark-red yellow font-teko b f3 f2-l tc bg-animate ba bw1 b--dark-gray br3"
-      href="https://sovietlinux.ml/##">
-        rootfs Direct
+      href="https://drive.google.com/file/d/1ILCa3aDjHYqGTS5ChO2JAROta5WfTf0s/view?usp=sharing">
+        tar.xz Direct
       </a>
-      <p class="measure f4 f3-l tl dark-gray">The rootfs is a squashfs that can be extracted into a directory, and accessed through chroot or systemd-nspawn.<br />
-      It can also be manually copied to an already formatted partition and directly booted.
+      <p class="measure f4 f3-l tl dark-gray">A <code>tar.xz</code> file that can be extracted into a directory, and accessed through chroot or systemd-nspawn.<br />
+      It can also be manually copied to an already formatted partition layout and directly booted.
       </p>
 </div>
 <div class="z-5 w-50 flex flex-column items-center justify-start pb3 ph3">
-      <!-- rootfs direct download   -->
+      <!-- live usb direct download   -->
       <a class="linux no-underline w-50 ph3 pv3 bg-sov-red hover-bg-dark-red yellow font-teko b f3 f2-l tc bg-animate ba bw1 b--dark-gray br3"
-      href="https://sovietlinux.ml/##">
+      href="https://drive.google.com/file/d/12m-FLWfaP7bAVfKR-a43yWTq6GHOwL9C/view?usp=sharing">
         img Direct
       </a>
       <p class="measure f4 f3-l tl dark-gray">
-          The img file can be copied to a usb device using <code>dd</code> or any other flashing utility. It will boot and function as a live environment. It uses the same files as the <code>rootfs.</code>
+          The img file can be copied to removable media using <code>dd</code> or any other flashing utility. It will boot and function as a live environment. It uses the same files as the <code>tar.xz</code> option
 </div>
 </section>
 <section class="pt4 tracked w-100 flex flex-column justify-center items-center pb3">
@@ -123,7 +127,7 @@ This whole section uses markdown! Parsedown is required unless you want to rewri
   if (file_exists($file)) { ?>
   <!-- this <p> is the section title -->
     <section class="z-5 pv5 ph2 flex flex-column items-center bg-sov-red-t9">
-      <p class="font-teko b tracked f2 light-yellow self-center">ABOUT</p>
+      <p class="font-teko b tracked f1 f2-m light-yellow self-center">ABOUT</p>
   <!-- the <div> below is the text of the section-->
       <div class="font-hind white flex flex-column a-blue measure">
   <?php
@@ -142,7 +146,7 @@ This whole section uses markdown! Parsedown is required unless you want to rewri
   if (file_exists($file)) { ?>
   <!-- this <p> is the section title -->
     <section class="z-5 pv5 ph2 self-stretch flex flex-column items-center bg-sov-red-t9">
-      <p class="font-teko b tracked f2 light-yellow self-center">DOCUMENTATION</p>
+      <p class="font-teko b tracked f1 f2-m light-yellow self-center">DOCUMENTATION</p>
   <!-- the <div> below is the text of the section-->
       <div class="font-hind white flex flex-column measure a-blue">
   <?php
@@ -171,7 +175,7 @@ This whole section uses markdown! Parsedown is required unless you want to rewri
 <!-- text -->
 <section class="z-4 flex flex-column items-center pb5">
 <!-- This <p> is the title of the content -->
-  <p class="font-teko b tracked f2 light-yellow self-center" id="contribute">CONTRIBUTE</p>
+  <p class="font-teko b tracked f1 f2-m light-yellow self-center" id="contribute">CONTRIBUTE</p>
   <p class="measure-l measure-wide-ns white tc">
   The revolution is calling your name!<br />
   We could use help in all aspects of building this distribution.</p>
