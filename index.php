@@ -54,7 +54,7 @@ We're using the Hind font as the default for text.
     </section>
 
 <!--hammer & sickle sliding in from the left-->
-    <section id="bg-flag" class="plx-back-2 z-2 flex items-start justify-center">
+    <section id="bg-flag" class="plx-back-2 z-2 flex items-start justify-center justify-start-ns">
         <img class="h-25 ani-fade-in-left ani-2s pl0 pl5-l pt5" src="assets/hamsic.svg" alt="crossed hammer and sickle">
     </section>
 
@@ -93,7 +93,7 @@ We welcome contributions from interested workers. <a class="" href="#contact">Co
 <section class="w-100 flex flex-row">
 <div class="z-5 w-50 flex flex-column items-center justify-start pb3 ph3">
       <!-- tar.xz direct download   -->
-      <a class="linux no-underline w-100 w-50-m ph3 pv3 bg-sov-red hover-bg-dark-red yellow font-teko b f3 f2-l tc bg-animate ba bw1 b--dark-gray br3"
+      <a class="linux no-underline w-100 w-50-l ph3 pv3 bg-sov-red hover-bg-dark-red yellow font-teko b f3 f2-l tc bg-animate ba bw1 b--dark-gray br3"
       href="https://drive.google.com/file/d/1ILCa3aDjHYqGTS5ChO2JAROta5WfTf0s/view?usp=sharing">
         tar.xz Direct
       </a>
@@ -103,7 +103,7 @@ We welcome contributions from interested workers. <a class="" href="#contact">Co
 </div>
 <div class="z-5 w-50 flex flex-column items-center justify-start pb3 ph3">
       <!-- live usb direct download   -->
-      <a class="linux no-underline w-100 w-50-m ph3 pv3 bg-sov-red hover-bg-dark-red yellow font-teko b f3 f2-l tc bg-animate ba bw1 b--dark-gray br3"
+      <a class="linux no-underline w-100 w-50-l ph3 pv3 bg-sov-red hover-bg-dark-red yellow font-teko b f3 f2-l tc bg-animate ba bw1 b--dark-gray br3"
       href="https://drive.google.com/file/d/12m-FLWfaP7bAVfKR-a43yWTq6GHOwL9C/view?usp=sharing">
         img Direct
       </a>
