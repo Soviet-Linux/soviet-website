@@ -54,19 +54,20 @@ We're using the Hind font as the default for text.
     </section>
 
 <!--hammer & sickle sliding in from the left-->
-    <section id="bg-flag" class="plx-back-2 z-2" >
-        <img class="h4-m h-25-l ani-fade-in-left ani-2s pl5 pt5" src="assets/hamsic.svg" alt="crossed hammer and sickle">
+    <section id="bg-flag" class="plx-back-2 z-2 flex items-start justify-center">
+        <img class="h-25 ani-fade-in-left ani-2s pl0 pl5-l pt5" src="assets/hamsic.svg" alt="crossed hammer and sickle">
     </section>
 
 <!-- lenny moving from the right to the left -->
-    <section id="lenin" class="plx-back-2 z-3 flex items-center justify-end">
-    <img class="h-75 ani-fade-in-right ani-2s ani-delay-1s ani-backwards pr5  " src="assets/lenin_inv.svg" />
+    <section id="lenin" class="plx-back-2 z-3 flex items-end justify-center justify-end-l">
+    <img class="h-25 h-75-l ani-fade-in-right ani-2s ani-delay-1s ani-backwards pr0 pr5-l pb2" src="assets/lenin_inv.svg" />
     </section>
 
 <!-- Tittle and subtitle-->
     <section id="title card" class="plx-back-1 z-4 flex flex-column items-center justify-center" style="">
-        <div id="title" class="ani-fade-in ani-15s ani-delay-1s ani-backwards font-russian near-white  f1 f-headline-l tracked">
-        SOVIET &#9773; LINUX
+        <div id="title" class="tc ani-fade-in ani-15s ani-delay-1s ani-backwards font-russian near-white f1 f-headline-l tracked">
+        SOVIET LINUX<br />
+        &#9773; <br />
         </div>
         <div id="subtitle" class="ani-fade-in ani-1s ani-delay-2s ani-backwards font-teko near-white f2 tracked">
         The People's Distribution
@@ -83,7 +84,7 @@ We're using the Hind font as the default for text.
   
       <p class="font-teko b tracked f1 f2-m sov-red self-center">DOWNLOAD
       </p>
-      <p class="measure a-dark">
+      <p class="measure a-dark pa2 pa0-m">
       <b>Soviet Linux is in the early stages of development.</b><br />
        There is active work being done to make <i>Soviet</i> into a fully functional Linux experience. However, at this time it's <b>not</b> suitable for daily use.
 We welcome contributions from interested workers. <a class="" href="#contact">Contact us</a> to see how you can join us.</p>
@@ -92,7 +93,7 @@ We welcome contributions from interested workers. <a class="" href="#contact">Co
 <section class="w-100 flex flex-row">
 <div class="z-5 w-50 flex flex-column items-center justify-start pb3 ph3">
       <!-- tar.xz direct download   -->
-      <a class="linux no-underline w-50 ph3 pv3 bg-sov-red hover-bg-dark-red yellow font-teko b f3 f2-l tc bg-animate ba bw1 b--dark-gray br3"
+      <a class="linux no-underline w-100 w-50-m ph3 pv3 bg-sov-red hover-bg-dark-red yellow font-teko b f3 f2-l tc bg-animate ba bw1 b--dark-gray br3"
       href="https://drive.google.com/file/d/1ILCa3aDjHYqGTS5ChO2JAROta5WfTf0s/view?usp=sharing">
         tar.xz Direct
       </a>
@@ -102,7 +103,7 @@ We welcome contributions from interested workers. <a class="" href="#contact">Co
 </div>
 <div class="z-5 w-50 flex flex-column items-center justify-start pb3 ph3">
       <!-- live usb direct download   -->
-      <a class="linux no-underline w-50 ph3 pv3 bg-sov-red hover-bg-dark-red yellow font-teko b f3 f2-l tc bg-animate ba bw1 b--dark-gray br3"
+      <a class="linux no-underline w-100 w-50-m ph3 pv3 bg-sov-red hover-bg-dark-red yellow font-teko b f3 f2-l tc bg-animate ba bw1 b--dark-gray br3"
       href="https://drive.google.com/file/d/12m-FLWfaP7bAVfKR-a43yWTq6GHOwL9C/view?usp=sharing">
         img Direct
       </a>
@@ -163,7 +164,7 @@ This whole section uses markdown! Parsedown is required unless you want to rewri
 </main>
 
 <!-- the <footer> is doing the same as <main> right now - it's a container with a background image. -->
-<footer class="relative z-5 bg-dark-gray bg-bottom bg-fixed bg-size-w75-ns bg-size-w50-l" style="background-image: url('./assets/sov_flag-angle.svg')">
+<footer class="relative z-5 bg-dark-gray bg-bottom bg-fixed bg-size-h25 bg-size-h50-l" style="background-image: url('./assets/sov_flag-angle.svg')">
 
 <!-- this section is semi-transparent grey, which lets the <footer> background image show through. It's using flexbox instead of paragraphs so that we can add more links in later and readjust the flow (if needed) -->
   <section class="z-5 pt5 ph2 bg-dark-gray-t8 flex items-start justify-center">
