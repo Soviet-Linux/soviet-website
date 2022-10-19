@@ -29,6 +29,37 @@ Do not change anything unless you know what you're doing!
   any extra styles can be put here between the <style> tags, or in the stylesheet directly. Any duplicate content put here will override content in the stylesheet. Use with caution.
   -->
   <style>
+<!-- the font calls are in the main page instead of the style sheet to speed up load times. -->
+@font-face {
+  font-family: 'Teko';
+  src: url('../assets/Teko-Regular.ttf');
+  }
+
+.font-teko {
+  font-family: 'Teko', sans-serif;
+  font-display: swap;
+  }
+
+@font-face {
+  font-family: 'Hind';
+  src: url('../assets/Hind-Regular.ttf');
+  }
+
+.font-hind {
+  font-family: 'Hind', sans-serif;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Russian';
+  src: url('../assets/Russian.ttf');
+  }
+
+.font-russian {
+  font-family: 'Russian', sans-serif;
+  font-display: swap;
+  }
+
   </style>
   <!-- we're using Parsedown for the 'about' & 'documentation' sections. Do NOT remove this php include unless you're prepared to rewrite the middle section of the site. -->
   <?php
@@ -60,7 +91,7 @@ We're using the Hind font as the default for text.
 
 <!-- lenny moving from the right to the left -->
     <section id="lenin" class="plx-back-2 z-3 flex items-end justify-center justify-end-l">
-    <img class="h-25 h-75-l ani-fade-in-right ani-2s ani-delay-1s ani-backwards pr0 pr5-l pb2" src="assets/lenin_inv.svg" />
+    <img class="h-25 h-75-l ani-fade-in-right ani-2s ani-delay-1s ani-backwards pr0 pr5-l pb2" src="assets/lenin_inv.svg" alt="stylized two-colour picture of Vladimir Lenin" />
     </section>
 
 <!-- Tittle and subtitle-->
@@ -77,7 +108,7 @@ We're using the Hind font as the default for text.
 </header>
 
 <!-- the main content of the page - more stuff will come in here eventually. -->
-<main class="relative z-4 bg-sov-red bg-center bg-top-l contain bg-fixed bg-animate bb bw2 bw3-l b--dark-gray" style="background-image: url('./assets/unbreakable_union.jpg');">
+<main class="relative z-4 bg-sov-red bg-center bg-top-l contain bg-fixed bg-animate bb bw2 bw3-l b--dark-gray" style="background-image: url('./assets/unbreakable_union.jpg');" loading="lazy">
 <!-- the aside contains the download links -->
 <aside class="relative z-4 bg-center bg-top-l contain bg-fixed" style="background-image: url('./assets/popup_marx_engels_lenin.jpg');">
     <section class="tc mnvh-50 pv5 flex flex-column items-center justify-center bg-sov-yellow-t9 bt bb bw2 bw3-ns b--dark-gray">
@@ -164,13 +195,13 @@ This whole section uses markdown! Parsedown is required unless you want to rewri
 </main>
 
 <!-- the <footer> is doing the same as <main> right now - it's a container with a background image. -->
-<footer class="relative z-5 bg-dark-gray bg-bottom bg-fixed bg-size-h25 bg-size-h50-l" style="background-image: url('./assets/sov_flag-angle.svg')">
+<footer class="relative z-5 bg-dark-gray bg-bottom bg-fixed bg-size-h25 bg-size-h50-l" style="background-image: url('./assets/sov_flag-angle.svg')"  alt="flag of the soviet union" loading="lazy">
 
 <!-- this section is semi-transparent grey, which lets the <footer> background image show through. It's using flexbox instead of paragraphs so that we can add more links in later and readjust the flow (if needed) -->
   <section class="z-5 pt5 ph2 bg-dark-gray-t8 flex items-start justify-center">
       <!-- penguin with sickle -->
     <section class="z-3 self-end tc">
-      <img class="w-75-m w-50-l v-btm" src="assets/penguin-sickle.svg" alt="penguin holding a sickle">
+      <img class="w-75-m w-50-l v-btm" src="assets/penguin-sickle.svg" alt="penguin holding a sickle" loading="lazy">
     </section>
 
 <!-- text -->
@@ -186,7 +217,7 @@ This whole section uses markdown! Parsedown is required unless you want to rewri
     <div class="tc pt3 font-teko tracked white">
       <figure class="tc" style="">
     <a class="f4 f3-ns db no-underline hover-bg-sov-red br2 pv2 ph1" href="https://discord.gg/pTFJjckEjp">
-      <img class="h3" src="assets/discord-white.svg" alt="official logo for discord.com">
+      <img class="h3" src="assets/discord-white.svg" alt="official logo for discord.com" loading="lazy">
       <figcaption class="light-yellow">DISCORD</figcaption>
       </a>
       </figure>
@@ -197,7 +228,7 @@ This whole section uses markdown! Parsedown is required unless you want to rewri
     <div class="tc pt3 font-teko tracked white">
       <figure class="tc" style="">
     <a class="f4 f3-ns db no-underline hover-bg-sov-red br2 pv2 ph1" href="https://git.sovietlinux.ml/sovietlinux">
-      <img class="h3" src="assets/gitlab-white.svg" alt="official logo for gitlab">
+      <img class="h3" src="assets/gitlab-white.svg" alt="official logo for gitlab" loading="lazy">
       <figcaption class="light-yellow">GITLAB</figcaption>
         </a>
       </figure>
@@ -208,9 +239,8 @@ This whole section uses markdown! Parsedown is required unless you want to rewri
     <div class="tc pt3 font-teko tracked white">
       <figure class="tc" style="">
     <a class="f4 f3-ns db no-underline hover-bg-sov-red br2 pv2 ph1" href="https://liberapay.com/sovietlinux">
-      <img class="h3" src="assets/libreapay-white.svg" alt="official logo for libreapay.com">
-      <figcaption class="light-yellow">LIBREAPAY
-      </figcaption>
+      <img class="h3" src="assets/libreapay-white.svg" alt="official logo for libreapay.com" loading="lazy">
+      <figcaption class="light-yellow">LIBREAPAY</figcaption>
     </a>
       </figure>
     support our server upkeep costs.
@@ -219,7 +249,7 @@ This whole section uses markdown! Parsedown is required unless you want to rewri
 
   <!-- penguin with hammer -->
     <section class="z-3 self-end tc">
-      <img class="w-75-m w-50-l v-btm" src="assets/penguin-hammer.svg" alt="penguin holding a hammer">
+      <img class="w-75-m w-50-l v-btm" src="assets/penguin-hammer.svg" alt="penguin holding a hammer" loading="lazy">
     </section>
   </section>
 </footer>
