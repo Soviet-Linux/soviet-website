@@ -152,42 +152,68 @@ We welcome contributions from interested workers. <a class="" href="#contact">Co
 <!-- this section is the about info. It's got a semi-transparent background, which lets the image from show through.
 This whole section uses markdown! Parsedown is required unless you want to rewrite this space. -->
   <?php
-  $file = "./markdown/about.md";
-  if (file_exists($file)) { ?>
-  <!-- this <p> is the section title -->
-    <section class="z-5 pv5 ph2 flex flex-column items-center bg-sov-red-t9">
-      <p class="font-teko b tracked f1 f2-m light-yellow self-center">ABOUT</p>
-  <!-- the <div> below is the text of the section-->
-      <div class="font-hind white flex flex-column a-blue measure">
-  <?php
-  $filename = fopen($file, 'r') or die("Unable to open file!");
-  $Parsedown = new Parsedown ();
-  echo $Parsedown->text(fread($filename,filesize($file)));
-  fclose($filename);
-  ?>
-      </div>
-    </section>
-  <?php
+
+
+
+
+
+function printMdFile($file, $paragraphName) {
+  if (file_exists($file)) {
+    ?>
+      <!-- this <p> is the section title -->
+      <section class="z-5 pv5 ph2 flex flex-column items-center bg-sov-red-t9">
+        <p class="font-teko b tracked f1 f2-m light-yellow self-center"><?= $paragraphName ?></p>
+        <!-- the <div> below is the text of the section-->
+        <div class="font-hind white flex flex-column a-blue measure">
+        <?php
+      $filename = fopen($file, 'r') or die("Unable to open file!");
+      $Parsedown = new Parsedown ();
+      echo $Parsedown->text(fread($filename,filesize($file)));
+      fclose($filename);
+        ?>
+        </div>
+      </section>
+    <?php
   }
-  ?>
-  <?php
-  $file = "./markdown/main.md";
-  if (file_exists($file)) { ?>
-  <!-- this <p> is the section title -->
-    <section class="z-5 pv5 ph2 self-stretch flex flex-column items-center bg-sov-red-t9">
-      <p class="font-teko b tracked f1 f2-m light-yellow self-center">DOCUMENTATION</p>
-  <!-- the <div> below is the text of the section-->
-      <div class="font-hind white flex flex-column measure a-blue">
-  <?php
-  $filename = fopen($file, 'r') or die("Unable to open file!");
-  $Parsedown = new Parsedown ();
-  echo $Parsedown->text(fread($filename,filesize($file)));
-  fclose($filename);
-  ?>
-      </div>
-    </section>
-  <?php
-  }
+}
+
+
+
+$mdFiles = [
+    [
+      "path" => "./markdown/about.md",
+      "title" => "ABOUT"
+    ],
+    [
+      "path" => "./markdown/main.md",
+      "title" => "DOCUMENTATION"
+    ],
+    [
+      "path" => "./markdown/cccp.md",
+      "title" => "CCCP"
+    ],
+    [
+      "path" => "./markdown/installer.md",
+      "title" => "INSTALLER"
+    ],
+    [
+      "path" => "./markdown/liveusb.md",
+      "title" => "LIVE USB"
+    ],
+    [
+      "path" => "./markdown/repo.md",
+      "title" => "REPO"
+    ]
+];
+
+
+
+foreach ($mdFiles as $mdFile) {
+  printMdFile($mdFile["path"], $mdFile["title"]);
+}
+
+
+
   ?>
 </main>
 
