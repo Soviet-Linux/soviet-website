@@ -9,3 +9,9 @@ Then just
 bun install
 bunx --bun astro dev
 ```
+
+## Building
+```bash
+bunx --bun astro build
+```
+The result is in `dist/`
