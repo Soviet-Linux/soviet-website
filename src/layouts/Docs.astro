@@ -1,0 +1,49 @@
+---
+// Docs.astro
+import Navbar from "../components/NavBar.astro";
+import Sidebar from "../components/Sidebar.astro";
+import SidebarItem from "../components/SidebarItem.astro";
+
+const currentPath = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Soviet Linux</title>
+    </head>
+    <body class="bg-[#561818] text-white">
+        <Navbar />
+
+        <Sidebar class="p-4">
+            <SidebarItem
+                href="/docs/"
+                title="Getting Started"
+                currentPath={currentPath}
+            />
+            <SidebarItem
+                href="/docs/installation"
+                title="Installation"
+                currentPath={currentPath}
+            />
+            <SidebarItem
+                href="#features"
+                title="Features"
+                currentPath={currentPath}
+            />
+            <SidebarItem
+                href="#contributing"
+                title="Contributing"
+                currentPath={currentPath}
+            />
+        </Sidebar>
+
+        <main
+            class="prose prose-slate text-white ml-96 pt-28 pb-28 px-8 max-w-5xl"
+        >
+            <slot />
+        </main>
+    </body>
+</html>

@@ -1,4 +1,8 @@
-<nav class="w-full bg-red-900 py-4 px-6 fixed top-0 shadow-lg">
+---
+import NavBarItem from "./NavBarItem.astro";
+---
+
+<nav class="w-full bg-red-900 py-4 px-6 fixed top-0 shadow-lg z-10">
     <div class="max-w-7xl mx-auto flex justify-between items-center">
         <div
             class="text-yellow-400 font-bold font-teko text-4xl uppercase tracking-widest"
@@ -7,27 +11,23 @@
         </div>
 
         <div class="hidden md:flex space-x-6">
-            <a
+            <NavBarItem href="/" text="Home" />
+            <NavBarItem href="/docs" text="Docs" />
+            <NavBarItem
                 href="https://github.com/Soviet-Linux"
-                class="text-yellow-300 hover:text-yellow-500 transition-colors duration-300 font-bold uppercase"
+                text="GitHub"
                 target="_blank"
-            >
-                GitHub
-            </a>
-            <a
+            />
+            <NavBarItem
                 href="https://matrix.to/#/#sovietlinux:nope.chat"
-                class="text-yellow-300 hover:text-yellow-500 transition-colors duration-300 font-bold uppercase"
+                text="Matrix"
                 target="_blank"
-            >
-                Matrix
-            </a>
-            <a
+            />
+            <NavBarItem
                 href="https://github.com/Soviet-Linux/OUR"
-                class="text-yellow-300 hover:text-yellow-500 transition-colors duration-300 font-bold uppercase"
+                text="Repo"
                 target="_blank"
-            >
-                Repo
-            </a>
+            />
         </div>
     </div>
 </nav>

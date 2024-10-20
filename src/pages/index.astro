@@ -1,19 +1,51 @@
 ---
-import NavBar from "../components/NavBar.astro";
-import Header from "../components/Header.astro";
+import Main from "../layouts/Main.astro";
 ---
 
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Soviet Linux</title>
-    </head>
-    <body
-        class="bg-red-900 bg-center bg-cover bg-fixed min-h-screen flex flex-col justify-center items-center"
+<Main>
+    <header
+        class="flex flex-col items-center px-6 py-28 md:py-36 text-center relative"
     >
-        <NavBar />
-        <Header />
-    </body>
-</html>
+        <h1
+            class="text-8xl md:text-9xl font-bold font-teko text-yellow-400 uppercase tracking-widest transition-transform duration-300 hover:scale-105"
+            style="text-shadow: 4px 4px 0 #000000;"
+        >
+            Soviet Linux
+        </h1>
+        <p
+            class="mt-4 text-xl md:text-2xl text-white font-bold font-maven max-w-2xl leading-relaxed"
+        >
+            <strong>The proletariat's distro</strong>
+        </p>
+        <p
+            class="disclamer mt-2 text-lg md:text-xl text-gray-300 font-mono font-bold max-w-2xl leading-relaxed border-t-2 border-red-600 pt-2"
+            style="background-color: rgba(255, 0, 0, 0.1); padding: 10px; border-radius: 5px;"
+        >
+            The heroic work continues to make <i>Soviet Linux</i> a daily tool of
+            the worker's digital arsenal. Though it is not yet ready for daily use,
+            <strong>all contributions are welcome!</strong>
+        </p>
+
+        <a
+            href="https://discord.gg/5RVsSEej8M"
+            class="mt-4 text-lg text-yellow-400 font-bold uppercase border-2 border-yellow-400 px-4 py-2 hover:bg-yellow-400 hover:text-red-800 transition-colors duration-300"
+        >
+            Join the Discord Revolution!
+        </a>
+    </header>
+
+    <div class="fixed bottom-0 left-0 ml-2">
+        <img
+            src="/assets/penguin-sickle.svg"
+            alt="Penguin Sickle"
+            class="h-96 w-96"
+        />
+    </div>
+    <div class="fixed bottom-0 right-0 mr-2">
+        <img
+            src="/assets/penguin-hammer.svg"
+            alt="Penguin Hammer"
+            class="h-96 w-96"
+        />
+    </div>
+</Main>

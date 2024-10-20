@@ -1,0 +1,18 @@
+---
+import NavBar from "../components/NavBar.astro";
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Soviet Linux</title>
+    </head>
+    <body
+        class="bg-[#561818] bg-center bg-cover bg-fixed min-h-screen flex flex-col justify-center items-center"
+    >
+        <NavBar />
+        <slot />
+    </body>
+</html>
