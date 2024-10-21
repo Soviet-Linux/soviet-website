@@ -36,23 +36,50 @@ $ /etc/soviet-install.sh /dev/sdX # Target drive
 Then after a reboot you should be good to go with your new Soviet-powered PC
 ## 2. Trying it out on VM
 
+### Step 1: Create a New Virtual Machine
+
 Create a new virtual machine using the previously downloaded image.
 ![](/assets/virt1.png)
-You will need to select your soviet image and dont forget to set the OS to `generic linux 2022`
+Select your Soviet image and set the OS to `Generic Linux 2022`.
 ![](/assets/virt2.png)
-This depends on how much resources you want to dedicate, we recommend atleast 4 gigabytes of ram and 2 cores
+
+### Step 2: Configure Resources
+
+Configure the resources for your virtual machine. We recommend allocating at least 4 gigabytes of RAM and 2 cores.
 ![](/assets/virt3.png)
-Now make the image however big you want to, we recommend atleast 25gb
+
+### Step 3: Name Your VM and Customize Configuration
+
+Name your virtual machine and make sure to select `Customize configuration before install`. This is crucial for the installation to work.
 ![](/assets/virt4.png)
-Now you can name your VM however you want, but dont forget to set `customize configuration before install` or else it will not work
+
+### Step 4: Delete the existing drives
+
+Set the `Firmware` to `UEFI` and click apply. Delete the existing drives.
 ![](/assets/virt5.png)
-Set `Firmware` to `UEFI` and click apply
+### Step 5: Create CD Drive
+
+Create the root drive for the Soviet installation. Make sure to use virtIO, as the installation may not work without them.
 ![](/assets/virt6.png)
-Now you can begin the installation
-Boot from the installation image. log in as `root` with password `sovietlinux` and run:
+
+### Step 6: Create Root Drive
+
+Create the root drive for the Soviet installation. Make sure to use virtIO, as the installation may not work without them.
+![](/assets/virt7.png)
+
+### Step 7: Set CDROM as boot device
+![](/assets/virt8.png)
+
+### Step 7: Begin Installation
+
+Boot from the installation image. Log in as `root` with the password `sovietlinux` and run the following command:
 ```bash
 $ /etc/soviet-install.sh /dev/vdb
 ```
-This should typically point to `/dev/vdb`, assuming you followed the tutorial.
+This command should typically point to `/dev/vdb`, assuming you followed the tutorial.
 
-Now you are done, you should reboot the VM and boot into Soviet
+### Step 8: Shut Down and Reboot
+
+Shut down the virtual machine and ensure that the virtIO drive is at the top.
+![](/assets/virt9.png)
+Then, reboot the VM. It should now boot into your new Soviet installation.
